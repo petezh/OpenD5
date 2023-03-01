@@ -1,0 +1,4972 @@
+abc_headlines:
+- generation: the year they were published
+  applications:
+  - target: which categories of news dominated the headlines from year to year
+    user: a historian writing about trends
+    example_hypotheses:
+    - talks about healthcare and medical breakthroughs or issues
+    - mention sporting events, such as AFL games and the Rugby World Cup
+    - focus on issues related to agriculture, such as the rise of female farmers and
+      push for higher milk prices
+    v2-origid: 3
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    '2007_2008':
+      pos_desc: are ABC news headlines from 2007
+      neg_desc: are ABC news headlines from 2008
+      pos_class:
+      - '2007'
+      neg_class:
+      - '2008'
+      example_hypotheses:
+      - talks less about the economy
+      - talks less about the election
+      - mentions President Bush
+      - discusses terrorism
+    '2010_2014':
+      pos_desc: are ABC news headlines from 2010
+      neg_desc: are ABC news headlines from 2014
+      pos_class:
+      - '2010'
+      neg_class:
+      - '2014'
+      example_hypotheses:
+      - mentions Obamacare
+      - talks about the recession
+    '2016_2017':
+      pos_desc: are ABC news headlines from 2017
+      neg_desc: are ABC news headlines from 2016
+      pos_class:
+      - '2017'
+      neg_class:
+      - '2016'
+      example_hypotheses:
+      - mentions Clinton
+      - mentions polling
+      - refers to Trump as a candidate
+      - talks about Russia
+    '2019_2020':
+      pos_desc: are ABC news headlines from 2019
+      neg_desc: are ABC news headlines from 2020
+      pos_class:
+      - '2019'
+      neg_class:
+      - '2020'
+      example_hypotheses:
+      - talks less about COVID-19
+      - is more optimistic
+      - mentions President Trump
+      - does not mention Biden
+  flip: true
+ad_transcripts:
+- generation: the industry of the company
+  applications:
+  - target: what different industries appeal to in ads
+    user: an advertiser trying to learn about other industries
+    example_hypotheses:
+    - emphasizes the results of the product, such as long-lasting colour or healthier-looking
+      skin
+    - uses adjectives such as 'rich', 'sultry', and 'gorgeous' to describe the product
+    - mentions natural ingredients and botanicals
+    v2-origid: 5
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    automative_travel:
+      pos_desc: are ad transcripts for automobile companies
+      neg_desc: are ad transcripts for travel companies
+      pos_class:
+      - Automotive
+      neg_class:
+      - Travel
+      example_hypotheses:
+      - talks more about cars
+      - talks more about fuel efficiency
+      - discusses speed
+      - appeals to men
+    beauty_care:
+      pos_desc: are ad transcripts for beauty products
+      neg_desc: are ad transcripts for personal care products
+      pos_class:
+      - Beauty
+      neg_class:
+      - Home & Personal Care
+      example_hypotheses:
+      - talks more about perception
+      - talks more about fashion
+      - appeals to women
+      - mentions beauty brands
+  flip: true
+admin_statements:
+- generation: the president leading the administration
+  applications:
+  - target: the legislative priorities of each administration
+    user: a political scientist analyzing policy stances
+    example_hypotheses:
+    - mentions the Affordable Care Act
+    - mentions the Dodd-Frank Wall Street Reform and Consumer Protection Act
+    - acknowledges the importance of the African Growth and Opportunity Act
+    v2-origid: 6
+    purely_exploratory: false
+  - target: the ideological stances of each administration
+    user: a political scientist analyzing policy stances
+    example_hypotheses:
+    - discusses the importance of collaboration with States, Tribes, local governments,
+      and private entities
+    - highlights the need for investments in defense readiness and modernization
+    - discusses the need for environmental justice
+    v2-origid: 2006
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    obama_biden:
+      pos_desc: are administration statements from Obama
+      neg_desc: are administration statements from Biden
+      pos_class:
+      - 44-Obama
+      neg_class:
+      - 46-Biden
+      example_hypotheses:
+      - talks more about the Great Recession
+      - does not mention COVID-19
+      - mentions healthcare
+      - discusses troops
+      - mentions unemployment
+    trump_biden:
+      pos_desc: are administration statements from Trump
+      neg_desc: are administration statements from Biden
+      pos_class:
+      - 45-Trump
+      neg_class:
+      - 46-Biden
+      example_hypotheses:
+      - talks more about immigration
+      - favors conservative policies
+      - talks less about COVID-19
+      - is more hostile
+  flip: true
+airline_reviews:
+- generation: the stars given in the review
+  applications:
+  - target: how to improve specific aspects of the airport and airplane experience
+      for customers
+    user: the manager of an airport
+    example_hypotheses:
+    - mentions the lack of a complimentary item (e.g. a muffin)
+    - mentions the seat pitch being too small for a tall person
+    - mentions the lack of USB and power outlets at the seat
+    v2-origid: 12
+    purely_exploratory: false
+  pair_type: sentiment
+  pairs:
+    airline_comfort_rating_1_5:
+      pos_desc: rate an airline's comfort 1/5
+      neg_desc: rate an airline's comfort 5/5
+      pos_class:
+      - airline_overall_rating_1
+      neg_class:
+      - airline_overall_rating_5
+      example_hypotheses:
+      - talks about seat space
+      - mentions uncomfortable seats
+      - talks about the poor service
+    airline_entertainment_rating_1_5:
+      pos_desc: rate an airline's entertainment 1/5
+      neg_desc: rate an airline's entertainment 5/5
+      pos_class:
+      - airline_entertainment_rating_1
+      neg_class:
+      - airline_entertainment_rating_5
+      example_hypotheses:
+      - complains about lack of wifi
+      - mentions lack of selection of movies
+      - talks about children being bored
+    airline_food_rating_1_5:
+      pos_desc: rate an airline's food 1/5
+      neg_desc: rate an airline's food 5/5
+      pos_class:
+      - airline_food_rating_1
+      neg_class:
+      - airline_food_rating_5
+      example_hypotheses:
+      - talks about terrible tasting food
+      - mentions food poisoning
+    airline_overall_1_5:
+      pos_desc: rate an airline overall 1/10
+      neg_desc: rate an airline overall 5/10
+      pos_class:
+      - airline_overall_rating_1
+      neg_class:
+      - airline_overall_rating_5
+      example_hypotheses:
+      - is very frustrated
+      - uses profanity
+      - mentions a failure to receive a refund
+      - mentions a canceled flight
+    airline_overall_5_8:
+      pos_desc: rate an airline overall 8/10
+      neg_desc: rate an airline overall 10/10
+      pos_class:
+      - airline_overall_rating_8
+      neg_class:
+      - airline_overall_rating_10
+      example_hypotheses:
+      - mentions minor inconveniences
+      - talks about discomfort during the flight
+      - is neutral in tone
+    airline_service_rating_1_5:
+      pos_desc: rate an airline's service 1/5
+      neg_desc: rate an airline's service 5/5
+      pos_class:
+      - airline_service_rating_1
+      neg_class:
+      - airline_service_rating_5
+      example_hypotheses:
+      - complains about untimely services
+      - mentions lack of food
+    airline_staff_rating_1_5:
+      pos_desc: rate an airline's staff 1/5
+      neg_desc: rate an airline's staff 5/5
+      pos_class:
+      - airline_staff_rating_1
+      neg_class:
+      - airline_staff_rating_5
+      example_hypotheses:
+      - talks about rude staff
+      - mentions understaffing
+    airline_value_rating_1_5:
+      pos_desc: rate an airline's value 1/5
+      neg_desc: rate an airline's value 5/5
+      pos_class:
+      - airline_value_rating_1
+      neg_class:
+      - airline_value_rating_5
+      example_hypotheses:
+      - talks about expensive pricing
+      - mentions unexpected charges
+    airport_cleanliness_rating_1_5:
+      pos_desc: rate an airport's cleanliness 1/5
+      neg_desc: rate an airport's cleanliness 5/5
+      pos_class:
+      - airport_cleanliness_rating_1
+      neg_class:
+      - airport_cleanliness_rating_5
+      example_hypotheses:
+      - mentions dirt on the floor
+      - mentions food left on the seat
+    airport_overall_1_5:
+      pos_desc: rate an airport 1/10 overall
+      neg_desc: rate an airport 5/10 overall
+      pos_class:
+      - airport_overall_rating_1
+      neg_class:
+      - airport_overall_rating_5
+      example_hypotheses:
+      - is very frustrated
+      - mentions a terrible experience
+    airport_overall_5_8:
+      pos_desc: rate an airport 8/10 overall
+      neg_desc: rate an airport 10/10 overall
+      pos_class:
+      - airport_overall_rating_8
+      neg_class:
+      - airport_overall_rating_10
+      example_hypotheses:
+      - mentions minor inconveniences
+      - talks about the service or entertainment
+    airport_queue_rating_1_5:
+      pos_desc: rate an airport's queue 1/5
+      neg_desc: rate an airport's queue 5/5
+      pos_class:
+      - airport_queue_rating_1
+      neg_class:
+      - airport_queue_rating_5
+      example_hypotheses:
+      - talks about long waits
+      - complains about TSA
+      - mentions missing a flight
+    airport_shopping_rating_1_5:
+      pos_desc: rate an airport's shopping avenues 1/5
+      neg_desc: rate an airport's shopping avenues 5/5
+      pos_class:
+      - airport_shopping_rating_1
+      neg_class:
+      - airport_shopping_rating_5
+      example_hypotheses:
+      - talks about a lack of food
+      - complains about pricing
+      - mentions essential goods
+  flip: false
+- generation: the airline the reviewer flew
+  applications:
+  - target: which aspects of each airline stand out to customers
+    user: a consumer researcher at an airline company
+    example_hypotheses:
+    - expresses frustration with the airline's refusal to offer any restitution for
+      lost hotel reservations
+    - mentions the staff as being unhelpful or rude
+    - mentions difficulty with checking in or printing boarding passes
+    v2-origid: 29
+    purely_exploratory: false
+  - target: what services and products are only offered by the other airline
+    user: the CEO of an airline company
+    example_hypotheses:
+    - notes the Indian veg/non-veg meal on board
+    - mentions wifi is not available in DXB
+    - mentions the lack of a tablet for controlling the entertainment system
+    v2-origid: 28
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    american_delta:
+      pos_desc: review American Airlines flights
+      neg_desc: review Delta Airlines flights
+      pos_class:
+      - airline_american
+      neg_class:
+      - airline_delta
+      example_hypotheses:
+      - talks about higher prices
+    british_ryan:
+      pos_desc: review of British Airways flights
+      neg_desc: review of Ryan Air flights
+      pos_class:
+      - airline_british
+      neg_class:
+      - airline_ryan
+      example_hypotheses:
+      - praises service
+      - complains about cost
+    canada:
+      pos_desc: review Canada Airlines flights
+      neg_desc: review Canada Airlines Rogue flights
+      pos_class:
+      - airline_canada
+      neg_class:
+      - airline_canada_rogue
+      example_hypotheses:
+      - does not mention business class
+      - talks about worse service
+    jet_emirates:
+      pos_desc: review Jet Airways flights
+      neg_desc: review Emirates flights
+      pos_class:
+      - airline_jet
+      neg_class:
+      - airline_emirates
+      example_hypotheses:
+      - mentions Dubai
+      - talks about food options
+    spirit_frontier:
+      pos_desc: review Spirit flights
+      neg_desc: review Frontier flights
+      pos_class:
+      - airline_spirit
+      neg_class:
+      - airline_frontier
+      example_hypotheses:
+      - complains about delayed flights
+      - mentions pricing
+    united_american:
+      pos_desc: review United Airlines flights
+      neg_desc: review American Airlines flights
+      pos_class:
+      - airline_united
+      neg_class:
+      - airline_american
+      example_hypotheses:
+      - talks about destinations outside of the US
+      - mentions long flights
+      - talks about food
+  flip: true
+- generation: the country the reviewer is from
+  applications:
+  - target: which specific features reviewers from each country care about
+    user: an owner of an international airline
+    example_hypotheses:
+    - mentions the quality of the onboard food
+    - mentions the price of the ticket
+    - mentions the IFE and its various offerings
+    v2-origid: 36
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    author_sg_in:
+      pos_desc: are airline reviews from Singapore
+      neg_desc: are airline reviews from India
+      pos_class:
+      - author_sg
+      neg_class:
+      - author_in
+      example_hypotheses:
+      - talks about service
+      - mentions communication issues
+      - mentions Asian food
+    author_uk_us:
+      pos_desc: are airline reviews from the UK
+      neg_desc: are airline reviews from the US
+      pos_class:
+      - author_uk
+      neg_class:
+      - author_us
+      example_hypotheses:
+      - uses a condescending tone
+      - is rude
+    author_aus_cad:
+      pos_desc: are airline reviews from Australia
+      neg_desc: are airline reviews from Canada
+      pos_class:
+      - author_aus
+      neg_class:
+      - author_cad
+      example_hypotheses:
+      - is more critical
+      - uses less polite language
+    author_ger_fr:
+      pos_desc: are airline reviews from Germany
+      neg_desc: are airline reviews from France
+      pos_class:
+      - author_ger
+      neg_class:
+      - author_fr
+      example_hypotheses:
+      - is more critical
+  flip: true
+- generation: the type of seat on the reviewed plane
+  applications:
+  - target: what customers like and don't like about each type of seat
+    user: a designer of airport seats
+    example_hypotheses:
+    - mentions difficulty getting out of the seat if the passenger in front reclines
+    - comments on the lack of PTV or AVOD
+    - describes the lack of space for cabin bags underneath the seat
+    v2-origid: 38
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    seats_3x3x3_3x3:
+      pos_desc: review airplane seats in a 3x3x3 arrangement
+      neg_desc: review airplane seats in a 3x3 arrangement
+      pos_class:
+      - seats_3x3x3
+      neg_class:
+      - seats_3x3
+      example_hypotheses:
+      - complains about room
+      - mentions difficulty reaching bathrooms
+    seats_3x4x3_2x4x2:
+      pos_desc: review airplane seats in a 3x4x3 arrangement
+      neg_desc: review airplane seats in a 2x4x2 arrangement
+      pos_class:
+      - seats_3x4x3
+      neg_class:
+      - seats_2x4x2
+      example_hypotheses:
+      - complains about being in the middle seat
+      - talks about poor seatmates
+  flip: true
+- generation: the model of the plane the reviewer flew on
+  applications:
+  - target: what customers like and don't like about each plane model
+    user: a product manager at an airplane manufacturer
+    example_hypotheses:
+    - mentions how the reclined seat in front makes it difficult to access the tray
+      table
+    - mentions how the entertainment screen is too close to the face to be visible
+    - mentions how the entertainment system is excellent and includes USB charger
+      ports
+    v2-origid: 40
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    seats_a340_a330:
+      pos_desc: review seats on the Airbus 340
+      neg_desc: review seats on the Airbus 330
+      pos_class:
+      - seats_a340
+      neg_class:
+      - seats_a330
+      example_hypotheses:
+      - mentions wider seats
+      - more positive
+      - praises the entertainment
+    seats_a380_a340:
+      pos_desc: review seats on the Airbus 380
+      neg_desc: review seats on the Airbus 340
+      pos_class:
+      - seats_a380
+      neg_class:
+      - seats_a340
+      example_hypotheses:
+      - mentions wider seats
+      - more positive
+      - praises the entertainment
+    seats_b777_b747:
+      pos_desc: review seats on the Boeing 777
+      neg_desc: review seats on the Boeing 747
+      pos_class:
+      - seats_b777
+      neg_class:
+      - seats_b747
+      example_hypotheses:
+      - mentions wider seats
+      - more positive
+      - praises the entertainment
+  flip: true
+- generation: the cabin of the customer
+  applications:
+  - target: the specific needs of customers in each cabin
+    user: a product manager at an airline company
+    example_hypotheses:
+    - describes the difficulty of getting out of a row in-flight
+    - mentions the need to haggle for dinner vouchers
+    - mentions the lack of priority boarding and/or lounge access
+    v2-origid: 42
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    seats_econ_prem:
+      pos_desc: review airplane seats for economy passengers
+      neg_desc: review airplane seats for premium passengers
+      pos_class:
+      - seats_econ
+      neg_class:
+      - seats_prem
+      example_hypotheses:
+      - complains about room
+      - talks about poor service
+  flip: true
+- generation: the type of traveller
+  applications:
+  - target: the specific needs of different kinds of travellers
+    user: a product manager at an airline company
+    example_hypotheses:
+    - mentions the high prices for food and drinks
+    - complains about a lack of seating and a lack of wheelchair accommodations
+    - mentions feeling rushed or not having enough time to make a connecting flight
+    v2-origid: 43
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    traveller_family_business:
+      pos_desc: are airline ratings from family travellers
+      neg_desc: are airline ratings from business travellers
+      pos_class:
+      - traveller_family
+      neg_class:
+      - traveller_business
+      example_hypotheses:
+      - mentions food
+      - mentions bathrooms
+      - does not mention delays
+    traveller_solo_couple:
+      pos_desc: are airline ratings from solo travellers
+      neg_desc: are airline ratings from couple travellers
+      pos_class:
+      - traveller_solo
+      neg_class:
+      - traveller_couple
+      example_hypotheses:
+      - focuses on practical needs
+      - talks
+  flip: true
+aita:
+- generation: whether Reddit commenters said they were in the wrong
+  applications:
+  - target: the speaking style of people in the wrong
+    user: a sociologist studying moral judgements
+    example_hypotheses:
+    - employs guilt-tripping language, such as 'sacrifice' and 'heartbroken'
+    - uses language to diminish the other person's opinion, such as 'completely unreasonable'
+      or 'ridiculous'
+    - uses generalizations or stereotypes about people
+    v2-origid: 61
+    purely_exploratory: false
+  - target: the actions which were judged as right or wrong
+    user: a sociologist studying moral judgements
+    example_hypotheses:
+    - demonstrates an effort to compromise or come to a mutual understanding
+    - acknowledges their own mistakes and takes responsibility for their actions
+    - demonstrates an understanding that there may be multiple perspectives on a given
+      situation
+    v2-origid: 50
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    verdict_a_nta:
+      pos_desc: describe scenarios where the author is in the wrong
+      neg_desc: describe scenarios where the author is not in the wrong
+      pos_class:
+      - verdict_a
+      neg_class:
+      - verdict_nta
+      example_hypotheses:
+      - is condescending in tone
+      - doesn't express regret
+      - is too confident
+      - mentions making assumptions about other people
+    verdict_es_a:
+      pos_desc: describe scenarios where everyone is in the wrong
+      neg_desc: describe scenarios where the author is in the wrong
+      pos_class:
+      - verdict_es
+      neg_class:
+      - verdict_a
+      example_hypotheses:
+      - describes multiple difficult people
+      - talks about fighting
+      - is condescending
+    verdict_nah_nta:
+      pos_desc: describe scenarios where no one is in the wrong
+      neg_desc: describe scenarios where the other person is in the wrong
+      pos_class:
+      - verdict_nah
+      neg_class:
+      - verdict_nta
+      example_hypotheses:
+      - talks about a dilemma
+      - expresses humility
+    topic_work:
+      pos_desc: describe work-related scenarios where the author is in the wrong
+      neg_desc: describe work-related scenarios where the author is not in the wrong
+      pos_class:
+      - topic_work_is_asshole
+      neg_class:
+      - topic_work_not_asshole
+      example_hypotheses:
+      - describes failure to communicate
+      - talks about a mean boss
+      - mentions deadlines
+    topic_sex:
+      pos_desc: describe intercourse-related scenarios where the author is in the
+        wrong
+      neg_desc: describe intercourse-related scenarios where the author is not in
+        the wrong
+      pos_class:
+      - topic_sex_is_asshole
+      neg_class:
+      - topic_sex_not_asshole
+      example_hypotheses:
+      - describes deception
+      - mentions consent
+      - is written by a man
+    topic_ex:
+      pos_desc: describe scenarios involving a former partner where the author is
+        in the wrong
+      neg_desc: describe scenarios involving a former partner where the author is
+        in the wrong
+      pos_class:
+      - topic_ex_is_asshole
+      neg_class:
+      - topic_ex_not_asshole
+      example_hypotheses:
+      - describes resentment
+      - talks about revenge
+    topic_race:
+      pos_desc: describe scenarios involving racism where the author is in the wrong
+      neg_desc: describe scenarios involving racism where the author is not in the
+        wrong
+      pos_class:
+      - topic_race_is_asshole
+      neg_class:
+      - topic_race_not_asshole
+      example_hypotheses:
+      - implies a shallow understanding of racism
+      - talks about a joke
+      - is written by someone who is white
+    topic_husband:
+      pos_desc: describe scenarios about the author's husband where the author is
+        in the wrong
+      neg_desc: describe scenarios about the author's husband where the author is
+        not in the wrong
+      pos_class:
+      - topic_husband_is_asshole
+      neg_class:
+      - topic_husband_not_asshole
+      example_hypotheses:
+      - describes failure to communicate
+      - talks about misreading emotions
+    topic_wife:
+      pos_desc: describe scenarios about the author's wife where the author is in
+        the wrong
+      neg_desc: describe scenarios about the author's wife where the author is not
+        in the wrong
+      pos_class:
+      - topic_husband_is_asshole
+      neg_class:
+      - topic_husband_not_asshole
+      example_hypotheses:
+      - describes failure to communicate
+      - mentions lack of support
+    topic_sexuality:
+      pos_desc: describe scenarios about sexuality where the author is in the wrong
+      neg_desc: describe scenarios about sexuality where the author is not in the
+        wrong
+      pos_class:
+      - topic_sexuality_is_asshole
+      neg_class:
+      - topic_sexuality_not_asshole
+      example_hypotheses:
+      - describes failure to communicate
+      - suggests homophobia
+    topic_children:
+      pos_desc: describe scenarios about children where the author is in the wrong
+      neg_desc: describe scenarios about children where the author is not in the wrong
+      pos_class:
+      - topic_children_is_asshole
+      neg_class:
+      - topic_children_not_asshole
+      example_hypotheses:
+      - implies hatred of children
+      - mentions irresponsible actions
+    topic_social_media:
+      pos_desc: describe scenarios about social media where the author is in the wrong
+      neg_desc: describe scenarios about social media where the author is not in the
+        wrong
+      pos_class:
+      - topic_social_media_is_asshole
+      neg_class:
+      - topic_social_media_not_asshole
+      example_hypotheses:
+      - talks about a violation of trust
+    topic_alcohol:
+      pos_desc: describe scenarios involving alcohol where the author is in the wrong
+      neg_desc: describe scenarios involving alcohol where the author is not in the
+        wrong
+      pos_class:
+      - topic_alcohol_is_asshole
+      neg_class:
+      - topic_alcohol_not_asshole
+      example_hypotheses:
+      - describes failure to communicate
+  flip: true
+armenian_jobs:
+- generation: the year the application was posted
+  applications:
+  - target: how the application requirements have evolved over time
+    user: a journalist writing about the job market
+    example_hypotheses:
+    - asks for a cover letter
+    - mentions the need for a letter of recommendation
+    - requires citizenship
+    v2-origid: 72
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    apps_pre_post_2012:
+      pos_desc: are job applications requirements from 2010 to 2012
+      neg_desc: are job applications requirements from 2013 to 2014
+      pos_class:
+      - app_process_years_2010_2013
+      neg_class:
+      - app_process_years_2013_2015
+      example_hypotheses:
+      - talks more about online applications
+      - mentions in person interview
+    pre_post_recession:
+      pos_desc: are job postings from 2004 to 2006
+      neg_desc: are job postings from 2007 to 2009
+      pos_class:
+      - job_req_years_2004_2007
+      neg_class:
+      - job_req_years_2007_2010
+      example_hypotheses:
+      - requires more experience
+      - lists specific languages
+      - requires a Master's degree
+    reqs_pre_post_2012:
+      pos_desc: are job postings from 2010 to 2012
+      neg_desc: are job postings from 2013 to 2014
+      pos_class:
+      - job_req_years_2010_2013
+      neg_class:
+      - job_req_years_2013_2015
+      example_hypotheses:
+      - requires newer programming languages
+      - requires more education
+  flip: true
+- generation: the type of role offered
+  applications:
+  - target: the expectations and responsibilities of each role, such as specific skills
+      or experiences
+    user: a job seeker figuring out which role is right for me
+    example_hypotheses:
+    - emphasizes the importance of company values and ethics
+    - requires familiarity with test automation processes
+    - Requires travelling for extended periods of time
+    v2-origid: 74
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    junior_senior:
+      pos_desc: are job postings for junior positions
+      neg_desc: are job postings for senior positions
+      pos_class:
+      - job_req_senior_sw_dev
+      - job_req_senior_sw_eng
+      - job_req_senior_qa_eng
+      neg_class:
+      - job_req_qa_eng
+      - job_req_sw_eng
+      - job_req_sw_dev
+      example_hypotheses:
+      - talks about senior positions
+      - mentions leadership experience
+    sw_qa:
+      pos_desc: are job postings for software positions
+      neg_desc: are job postings for quality assurance positions
+      pos_class:
+      - job_desc_sw_dev
+      - job_desc_senior_sw_dev
+      - job_desc_sw_eng
+      - job_desc_senior_sw_eng
+      neg_class:
+      - job_desc_qa_eng
+      - job_desc_senior_qa_eng
+      example_hypotheses:
+      - talks less about testing
+      - talks more about development
+      - mentions Java
+  flip: true
+blm_countermovements:
+- generation: the hashtags included in the Tweet
+  applications:
+  - target: the arguments made by each movement
+    user: a sociologist studying cultural movements
+    example_hypotheses:
+    - includes criticism of media coverage and representation
+    - mentions the success of peaceful protests
+    - emphasizes freedom of speech for protesters
+    - mentions the safety benefits of police officers
+    v2-origid: 76
+    purely_exploratory: false
+  - target: the attitude of each movement
+    user: a sociologist studying cultural movements
+    example_hypotheses:
+    - mentions the importance of respecting all life
+    - uses language advocating for unity and solidarity
+    - uses language of acceptance, understanding, and respect
+    - expresses a desire for change and reform in the justice system
+    - contains language that promotes empathy towards other races
+    - uses language that acknowledges racism
+    v2-origid: 2076
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    all_white:
+      pos_desc: 'are Tweets containing #AllLivesMatter'
+      neg_desc: 'are Tweets in support #WhiteLivesMatter'
+      pos_class:
+      - all_lives_matter
+      neg_class:
+      - white_lives_matter
+      example_hypotheses:
+      - does not demean black people
+      - does not mention white people
+      - is moderate in tone
+    blue_white:
+      pos_desc: 'are Tweets in support of #BlueLivesMatter'
+      neg_desc: 'are Tweets in support of #WhiteLivesMatter'
+      pos_class:
+      - blue_lives_matter
+      neg_class:
+      - white_lives_matter
+      example_hypotheses:
+      - mentions support for police
+      - does not demean black people
+      - mentions crime
+    blue_all:
+      pos_desc: 'are Tweets in support of #BlueLivesMatter'
+      neg_desc: 'are Tweets in support of #AllLivesMatter'
+      pos_class:
+      - blue_lives_matter
+      neg_class:
+      - all_lives_matter
+      example_hypotheses:
+      - mentions support for police
+      - talks about crime
+      - is not outwardly racist
+  flip: true
+cah:
+- generation: how many times the card won
+  applications:
+  - target: which topics tend to be funnier
+    user: a rhetoric researcher studying humor
+    example_hypotheses:
+    - is about intercourse
+    - mentions death and violence
+    - brings up romantic relationships
+    purely_exploratory: false
+  - target: what kinds of punchlines are funny
+    user:  a rhetoric researcher studying humor
+    example_hypotheses:
+    - are highly related to the setup
+    - are short
+    - include a play on words
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    white_cards:
+      pos_desc: are white cards that won the most
+      neg_desc: are white cards that won the least
+      pos_class:
+      - cards_funny
+      neg_class:
+      - cards_not_funny
+    jokes_funny_somewhat_funny:
+      pos_desc: are black card-white card pairs that won very often
+      neg_desc: are black card-white card pairs that won somewhat often
+      pos_class:
+      - jokes_very_funny
+      neg_class:
+      - jokes_somewhat_funny
+    jokes_funny_unfunny:
+      pos_desc: are black card-white card pairs that won often
+      neg_desc: are black card-white card pairs that usually lost
+      pos_class:
+      - jokes_very_funny
+      - jokes_funny
+      neg_class:
+      - jokes_not_funny
+  flip: true
+clickbait_headlines:
+- generation: the year it was published
+  applications:
+  - target: which specific topics dominate the news from year to year
+    user: a researcher studying misinformation
+    example_hypotheses:
+    - mentions gun control or gun related issues
+    - mentions the death of a celebrity
+    - mentions natural disasters and weather events
+    v2-origid: 79
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    pre_post_2013:
+      pos_desc: are clickbait headlines from 2010 to 2012
+      neg_desc: are clickbait headlines from 2013 to 2015
+      pos_class:
+      - '2010'
+      - '2011'
+      - '2012'
+      neg_class:
+      - '2013'
+      - '2014'
+      - '2015'
+      example_hypotheses:
+      - talks more about Mitt Romney
+      - talks more about Obama
+  flip: true
+convincing_arguments:
+- generation: how convincing annotators judged the arguments
+  applications:
+  - target: the rhetorical devices used by convincing arguments
+    user: a student writing an argumentative essay who hopes to improve their writing
+    example_hypotheses:
+    - uses personal stories and anecdotes to bring the argument to life
+    - uses vivid language to paint a picture of the situation
+    - acknowledges other perspectives, but provides reasons for why their own is more
+      valid
+    v2-origid: 80
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    convincing_unconvincing:
+      pos_desc: are convincing arguments
+      neg_desc: are unconvincing arguments
+      pos_class:
+      - somewhat_convincing
+      - convincing
+      neg_class:
+      - unconvincing
+      example_hypotheses:
+      - provides more explanation
+      - gives examples
+      - does not insult others
+      - cites evidence
+    convincing_somewhat_convincing:
+      pos_desc: are very convincing arguments
+      neg_desc: are somewhat convincing arguments
+      pos_class:
+      - convincing
+      neg_class:
+      - somewhat_convincing
+      example_hypotheses:
+      - provides a clear explanation
+      - links a sources
+      - is confident
+  flip: true
+craigslist_negotiations:
+- generation: the price of the good being sold
+  applications:
+  - target: the speaking style of negotiators with different stakes
+    user: a business professor interested in negotiation styles
+    example_hypotheses:
+    - uses more sophisticated vocabulary
+    - uses more metaphors to describe the car
+    - uses more bargaining-related words, such as 'meet', 'budge' and 'deal'
+    v2-origid: 83
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    bike_price:
+      pos_desc: are Craigslist negotiations for expensive bikes
+      neg_desc: are Craigslist negotiations for cheaper bikes
+      pos_class:
+      - bike_high
+      neg_class:
+      - bike_low
+      example_hypotheses:
+      - is more polite
+      - offers higher prices
+    car_price:
+      pos_desc: are Craigslist negotiations for expensive cars
+      neg_desc: are Craigslist negotiations for cheaper cars
+      pos_class:
+      - car_high
+      neg_class:
+      - car_low
+      example_hypotheses:
+      - is more polite
+      - offers higher prices
+    housing_price:
+      pos_desc: are Craigslist negotiations for expensive housing
+      neg_desc: are Craigslist negotiations for cheaper housing
+      pos_class:
+      - housing_high
+      neg_class:
+      - housing_low
+      example_hypotheses:
+      - is more polite
+      - offers higher prices
+  flip: true
+- generation: whether a transaction eventually occured
+  applications:
+  - target: the speaking style of successful conversations
+    user: a Craigslist customer who wants to negotiate well
+    example_hypotheses:
+    - uses polite language and shows respect for the seller's offer
+    - contains words of appreciation
+    - uses positive language
+    v2-origid: 85
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    success_failure:
+      pos_desc: are succesful Craigslist negotiations
+      neg_desc: are unsuccessful Craigslist negotiations
+      pos_class:
+      - success
+      neg_class:
+      - failure
+      example_hypotheses:
+      - is more cordial
+      - offers higher prices
+      - outline a long conversation
+      - expresses appreciation
+  flip: true
+dice_jobs:
+- generation: the company offering the position
+  applications:
+  - target: what specific skills different companies require
+    user: a recent STEM graduate looking for suitable jobs
+    example_hypotheses:
+    - refers to network security, Information Assurance, and DISA STIGs
+    - requires knowledge of JUNOS and other industry vendor certifications such as
+      JNCIA, JNCIS, JNCIP, JNCIE and CCNA, CCNP
+    - mentions familiarity with SEI CMM/CMMI and military or IEEE software engineering
+      practices
+    v2-origid: 88
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    amazon_dell:
+      pos_desc: are job postings for Amazon
+      neg_desc: are job postings for Dell
+      pos_class:
+      - amazon
+      neg_class:
+      - dell
+      example_hypotheses:
+      - talks more about Kotlin, a programming language
+      - talks more about Java, a programming language
+      - talks more about leadership principles
+    jpm_chase_deloitte:
+      pos_desc: are job postings for JP Morgan Chase
+      neg_desc: are job postings for Deloitte
+      pos_class:
+      - jpm
+      neg_class:
+      - deloitte
+      example_hypotheses:
+      - talks more about banking
+      - mentions finance background
+      - talks less about consulting
+    northup_grumman_leidos:
+      pos_desc: are job postings for Northup Grumman
+      neg_desc: are job postings for Leidos
+      pos_class:
+      - northup_grumman
+      neg_class:
+      - leidos
+      example_hypotheses:
+      - talks more about aerospace
+      - mentions weapons
+  flip: true
+diplomacy_deception:
+- generation: whether the players were telling the truth
+  applications:
+  - target: the speaking style of liars, so I can tell who might be lying
+    user: a sociologist studying lying in games
+    example_hypotheses:
+    - uses words such as 'really' or 'of course' to emphasize a point
+    - uses more questions than statements
+    - uses a cooperative tone to establish trust and cooperation
+    v2-origid: 89
+    purely_exploratory: false
+  pair_type: intent
+  pairs:
+    truth_lie:
+      pos_desc: are true statements in a game
+      neg_desc: are deceptive statements in a game
+      pos_class:
+      - truth
+      neg_class:
+      - lie
+      example_hypotheses:
+      - makes fewer requests
+      - praises the other player less
+      - is more straightforward
+  flip: true
+drug_experiences:
+- generation: the substance used during the experience
+  applications:
+  - target: the specific bodily experiences caused by each drug
+    user: a medical researcher researching effects of drugs
+    example_hypotheses:
+    - mentions feeling as if time is distorted
+    - mentions feeling like sinking into the environment
+    - mentions feelings of ego surrender or understanding of interconnectedness of
+      all things
+    v2-origid: 92
+    purely_exploratory: false
+  - target: which drug is more dangerous to the user
+    user: a government regulator considering legalizing a drug
+    example_hypotheses:
+    - mentions feeling extreme paranoia
+    - mentions feeling manipulated by the drug
+    - describes throwing up
+    v2-origid: 2092
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    cocaine_molly:
+      pos_desc: are accounts of cocaine use
+      neg_desc: are accounts of using MDMA/molly
+      pos_class:
+      - cocaine
+      neg_class:
+      - mdma
+      example_hypotheses:
+      - talks about energy
+      - does not mention concerts
+    lsd_dxm:
+      pos_desc: are accounts of LSD (a psychedelic) use
+      neg_desc: are accounts of DXM (cough syrup) use
+      pos_class:
+      - lsd
+      neg_class:
+      - dxm
+      example_hypotheses:
+      - more realistic experiences
+      - talks more about visions
+    lsd_shrooms:
+      pos_desc: are accounts of LSD (a psychedelic) use
+      neg_desc: are accounts of mushroom use
+      pos_class:
+      - lsd
+      neg_class:
+      - mushrooms
+      example_hypotheses:
+      - talks about higher energy
+      - mentions fewer hallucinations
+    shrooms_dxm:
+      pos_desc: are accounts of mushroom use
+      neg_desc: are accounts of DXM (cough syrup) use
+      pos_class:
+      - mushrooms
+      neg_class:
+      - dxm
+      example_hypotheses:
+      - mentions stomach pain
+  flip: true
+echr_decisions:
+- generation: the ruling of the court
+  applications:
+  - target: what kinds of evidence convince the court that there is a violation
+    user: a lawyer planning a defense for my defendant
+    example_hypotheses:
+    - brings up a voice recording
+    - refers to witnesses or expert testimony
+    - talks about DNA evidence
+    v2-origid: 94
+    purely_exploratory: false
+  - target: which actions are more likely to constitute a violation
+    user: a legal scholar studying court ideology
+    example_hypotheses:
+    - mentions a lack of medical treatment or inadequate medical care
+    - describes a case involving a minor or children
+    - refers to a breach of a human right or fundamental freedom
+    v2-origid: 2094
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    yes_no_violation:
+      pos_desc: are human rights trials where a violation was found
+      neg_desc: are human rights trials where no violation was found
+      pos_class:
+      - violation
+      neg_class:
+      - no_violation
+      example_hypotheses:
+      - talks more about witnesses
+      - mentions more violence
+      - talks about discrimination
+      - does not mention intent
+  flip: true
+essay_scoring:
+- generation: grades assigned by readers
+  applications:
+  - target: the general style of writing readers look for
+    user: a student writing an academic paper
+    example_hypotheses:
+    - uses metaphors and similes to create vivid imagery
+    - uses active verbs for a more dynamic writing style
+    - uses a lot of alliteration
+    v2-origid: 95
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    good_bad:
+      pos_desc: are essays with good scores
+      neg_desc: are essays with bad scores
+      pos_class:
+      - good_essays
+      neg_class:
+      - bad_essays
+      example_hypotheses:
+      - uses more sophisticated words
+      - is more coherent
+      - has fewer spelling mistakes
+      - cites examples
+  flip: false
+fake_news:
+- generation: whether they are legitimate or fake news articles
+  applications:
+  - target: the writing style of fake news sources
+    user: a content moderator looking to flag fake news
+    example_hypotheses:
+    - uses vague language to describe events or outcomes
+    - uses strong emotion-laden words, such as 'furious', 'victimized' and 'horrifying'
+    - uses sarcasm and mockery
+    v2-origid: 96
+    purely_exploratory: false
+  - target: the topics discussed by fake news sources
+    user: a content moderator looking to flag fake news
+    example_hypotheses:
+    - mentions Russia or Ukraine
+    - contains allegations against well-known figures without evidence
+    - talks about politicians and voting
+    v2-origid: 2096
+    purely_exploratory: false
+  pair_type: intent
+  pairs:
+    fake_legit:
+      pos_desc: are fake news articles
+      neg_desc: are legitimate news articles
+      pos_class:
+      - fake
+      neg_class:
+      - legit
+      example_hypotheses:
+      - uses extreme language
+      - cites fewer sources
+      - is more political
+      - is fearful
+  flip: true
+fomc_speeches:
+- generation: who gave the speech
+  applications:
+  - target: the economic ideology of different Fed chairpeople
+    user: a economist studying the stances of Fed board members
+    example_hypotheses:
+    - mentions the need for financial modernization
+    - mentions the benefits of bank regulation
+    - uses language emphasizing the importance of small businesses
+    v2-origid: 100
+    purely_exploratory: false
+  - target: the policy priorities of different Fed chairpeople
+    user: a economist studying the stances of Fed board members
+    example_hypotheses:
+    - discusses the Federal Reserve's role in banking supervision and regulation
+    - mentions the Gramm-Leach-Bliley Act
+    - discusses the need for convergence of regulatory standards
+    v2-origid: 2100
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    greenspan_bernanke:
+      pos_desc: are FOMC speeches from Chairman Greenspan
+      neg_desc: are FOMC speeches from Chairman Bernanke
+      pos_class:
+      - greenspan_speeches
+      neg_class:
+      - bernanke_speeches
+      example_hypotheses:
+      - calls for more action
+      - talks more about growth
+      - talks less about targets
+      - mentions the recession
+    yellen_powell:
+      pos_desc: are FOMC speeches from Chairman Yellen
+      neg_desc: are FOMC speeches from Chairman Powell
+      pos_class:
+      - yellen_speeches
+      neg_class:
+      - powell_chair_speeches
+      example_hypotheses:
+      - does not mention inflation
+      - talks about unemployment
+      - is optimistic
+    powell_gov_chair:
+      pos_desc: are FOMC speeches from Jerome Powell as Fed chariman
+      neg_desc: are FOMC speeches from Jerome Powell as a governor
+      pos_class:
+      - powell_chair_speeches
+      neg_class:
+      - powell_gov_speeches
+      example_hypotheses:
+      - mentions quantitative easing
+      - support financial regulation
+      - is more assertive
+    meyer_ferguson:
+      pos_desc: are FOMC speeches from Fed Governor Meyer
+      neg_desc: are FOMC speeches from Fed Vice Chairman Ferguson
+      pos_class:
+      - meyer_speeches
+      neg_class:
+      - ferguson_speeches
+      example_hypotheses:
+      - pushes to raise interest rates
+      - is more aggressive
+  flip: true
+- generation: the year the speech was given
+  applications:
+  - target: the trends in Fed policy and priorities over the years
+    user: a economic historian studying trends in Fed policy
+    example_hypotheses:
+    - mentions the importance of transparency and accountability for monetary policymaking
+    - mentions the importance of increasing representation of black women in economics
+    - references the 2 percent inflation objective
+    v2-origid: 102
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    greenspan_bernanke_year:
+      pos_desc: are FOMC speeches from before 2006
+      neg_desc: are FOMC speeches from 2006 to 2014
+      pos_class:
+      - greenspan_years
+      neg_class:
+      - bernanke_years
+      example_hypotheses:
+      - calls for more action
+      - talks more about growth
+      - talks less about targets
+    yellen_powell_years:
+      pos_desc: are FOMC speeches from 2014 to 2018
+      neg_desc: are FOMC speeches from after 2018
+      pos_class:
+      - yellen_years
+      neg_class:
+      - powell_years
+      example_hypotheses:
+      - talks more about unemployment
+      - does not mention COVID-19
+      - talks about economic growth
+  flip: true
+- generation: the state of the economy during the speech
+  applications:
+  - target: what outcomes the Fed prioritizes under different economic conditions
+    user: an economist studying patterns of Fed behavior
+    example_hypotheses:
+    - focuses on poverty and inequality
+    - discusses how to stimulate the economy and create jobs
+    - discusses strategies to achieve maximum employment and price stability
+    v2-origid: 105
+    purely_exploratory: false
+  pair_type: socioeconomic
+  pairs:
+    growth:
+      pos_desc: are FOMC speeches during periods of high GDP growth
+      neg_desc: are FOMC speeches during periods of low GDP growth
+      pos_class:
+      - high_growth
+      neg_class:
+      - low_growth
+      example_hypotheses:
+      - talks more about inflation
+      - talks about a strong economy
+    interest_rate:
+      pos_desc: are FOMC speeches during periods of high interest rates
+      neg_desc: are FOMC speeches during periods of low interest rates
+      pos_class:
+      - high_ir
+      neg_class:
+      - low_ir
+      example_hypotheses:
+      - talks more about inflation
+      - worries more about recession
+      - talks about job losses
+    unemployment:
+      pos_desc: are FOMC speeches during periods of high unemployment
+      neg_desc: are FOMC speeches during periods of low unemployment
+      pos_class:
+      - high_unemp
+      neg_class:
+      - low_unemp
+      example_hypotheses:
+      - talks more about unemployment
+      - talks about lowering the interest rate
+      - talks less about inflation
+      - mentions popular opinion
+  flip: true
+genius_lyrics:
+- generation: the year the song was released
+  applications:
+  - target: the specific topics of music throughout the years
+    user: a record label looking for the next big hit
+    example_hypotheses:
+    - references religious topics such as God or prayer
+    - mentions wealth and affluence, such as money or riches
+    - mentions a sense of belonging, such as a crew or a team
+    v2-origid: 107
+    purely_exploratory: false
+  - target: the artistic style of music throughout the years
+    user: a record label looking for the next big hit
+    example_hypotheses:
+    - uses a lot of imagery in the lyrics
+    - uses a lot of repetition in the lyrics
+    - is written in a conversational style, i.e., two people talking
+    v2-origid: 2107
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    2ks_2010s:
+      pos_desc: are 2000-2010 song lyrics
+      neg_desc: are 2010s song lyrics
+      pos_class:
+      - '2000'
+      - '2001'
+      - '2002'
+      - '2003'
+      - '2004'
+      - '2005'
+      - '2006'
+      - '2007'
+      - '2008'
+      - '2009'
+      neg_class:
+      - '2010'
+      - '2011'
+      - '2012'
+      - '2013'
+      - '2014'
+      - '2015'
+      - '2016'
+      - '2017'
+      - '2018'
+      - '2019'
+      example_hypotheses:
+      - does not mention technology
+      - is more optimistic
+    70s_80s:
+      pos_desc: are seventies song lyrics
+      neg_desc: are eighties song lyrics
+      pos_class:
+      - '1970'
+      - '1971'
+      - '1972'
+      - '1973'
+      - '1974'
+      - '1975'
+      - '1976'
+      - '1977'
+      - '1978'
+      - '1979'
+      neg_class:
+      - '1980'
+      - '1981'
+      - '1982'
+      - '1983'
+      - '1984'
+      - '1985'
+      - '1986'
+      - '1987'
+      - '1988'
+      - '1989'
+      example_hypotheses:
+      - is less passionate
+      - talks about rebellion
+    80s_90s:
+      pos_desc: are eighties song lyrics
+      neg_desc: are nineties song lyrics
+      pos_class:
+      - '1980'
+      - '1981'
+      - '1982'
+      - '1983'
+      - '1984'
+      - '1985'
+      - '1986'
+      - '1987'
+      - '1988'
+      - '1989'
+      neg_class:
+      - '1990'
+      - '1991'
+      - '1992'
+      - '1993'
+      - '1994'
+      - '1995'
+      - '1996'
+      - '1997'
+      - '1998'
+      - '1999'
+      example_hypotheses:
+      - is less passionate
+      - mentions the government
+    90s_2ks:
+      pos_desc: are nineties song lyrics
+      neg_desc: are 2000-2010 song lyrics
+      pos_class:
+      - '1990'
+      - '1991'
+      - '1992'
+      - '1993'
+      - '1994'
+      - '1995'
+      - '1996'
+      - '1997'
+      - '1998'
+      - '1999'
+      neg_class:
+      - '2000'
+      - '2001'
+      - '2002'
+      - '2003'
+      - '2004'
+      - '2005'
+      - '2006'
+      - '2007'
+      - '2008'
+      - '2009'
+      example_hypotheses:
+      - has hip-hop lyrics
+      - mentions rebellion
+      - uses profanity
+  flip: true
+- generation: the genre of the lyrics
+  applications:
+  - target: the topics that define each genre
+    user: an artist trying to figure out which genre my music belongs to
+    example_hypotheses:
+    - mentions relationships and heartbreak
+    - references to drugs and alcohol
+    - mentions struggles, including poverty and racism
+    v2-origid: 113
+    purely_exploratory: false
+  - target: the artistic style that defines each genre
+    user: an artist trying to figure out which genre my music belongs to
+    example_hypotheses:
+    - uses aggressive language and threats
+    - uses alliteration or slant rhyme in the lyrics
+    - uses metaphors and similes
+    v2-origid: 2113
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    alt_pop:
+      pos_desc: are from the alternative genre
+      neg_desc: are from the pop genre
+      pos_class:
+      - alt
+      neg_class:
+      - pop
+      example_hypotheses:
+      - discusses personal issues
+      - does not rhyme
+    alt_rock:
+      pos_desc: are from the alternative rock genre
+      neg_desc: are from the rock genre
+      pos_class:
+      - alt_rock
+      neg_class:
+      - rock
+      example_hypotheses:
+      - discusses personal issues
+      - talks about relationships
+    r_b_soul:
+      pos_desc: are from the R&B genre
+      neg_desc: are from the soul genre
+      pos_class:
+      - r_b
+      neg_class:
+      - soul
+      example_hypotheses:
+      - is not religious
+      - rhymes
+    rap_trap:
+      pos_desc: are from the rap genre
+      neg_desc: are from the trap genre
+      pos_class:
+      - rap
+      neg_class:
+      - trap
+      example_hypotheses:
+      - uses longer sentences
+      - does not repeat
+      - talks about personal issues
+  flip: true
+- generation: the artist
+  applications:
+  - target: the specific topics of each musician
+    user: a music fanatic hoping to understand each artist
+    example_hypotheses:
+    - speaks of potential, ambition, and success
+    - explores themes of loyalty, betrayal and redemption
+    - mentions racism and police brutality
+    - mentions religious faith and beliefs
+    v2-origid: 117
+    purely_exploratory: false
+  - target: the artistic style of each musician
+    user: a music fanatic hoping to understand each artist
+    example_hypotheses:
+    - uses street slang and references to Compton
+    - uses metaphorical language to describe their experiences
+    - features a recurring chorus
+    v2-origid: 2117
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    ariana_grande_beyonce:
+      pos_desc: are Ariana Grande song lyrics
+      neg_desc: are Beyonce song lyrics
+      pos_class:
+      - ariana_grande
+      neg_class:
+      - beyonce
+      example_hypotheses:
+      - talks more about relationships
+      - is less empowering
+    drake_kanye:
+      pos_desc: are Drake song lyrics
+      neg_desc: are Kanye song lyrics
+      pos_class:
+      - drake
+      neg_class:
+      - kanye
+      example_hypotheses:
+      - talks less about God
+      - talks more about money
+      - brags about wealth
+    eminem_logic:
+      pos_desc: are Eminem song lyrics
+      neg_desc: are Logic song lyrics
+      pos_class:
+      - eminem
+      neg_class:
+      - logic
+      example_hypotheses:
+      - use clever rhymes
+      - is less repetitive
+      - has longer sentences
+    kendrick_j_cole:
+      pos_desc: are Kendrick Lamar song lyrics
+      neg_desc: are J. Cole song lyrics
+      pos_class:
+      - kendrick
+      neg_class:
+      - j_cole
+      example_hypotheses:
+      - talks more about money
+      - uses more profanity
+      - demeans women
+    weeknd_post_malone:
+      pos_desc: are The Weeknd song lyrics
+      neg_desc: are Post Malone song lyrics
+      pos_class:
+      - ariana_grande
+      neg_class:
+      - beyonce
+      example_hypotheses:
+      - talks more about relationships
+  flip: true
+- generation: where the song was created
+  applications:
+  - target: the topics that come up in music from different places
+    user: a music researcher studying the emergence of music in different places
+    example_hypotheses:
+    - describes feelings of hopelessness or sadness
+    - uses words associated with traveling and exploration
+    - mentions London and other UK cities
+    v2-origid: 120
+    purely_exploratory: false
+  - target: the artistic style of music from different places
+    user: a music researcher studying the emergence of music in different places
+    example_hypotheses:
+    - uses religious imagery or references to spirituality
+    - uses strong language to express feelings of anger and frustration
+    - utilizes slang and colloquial language
+    v2-origid: 2120
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    east_west_coast:
+      pos_desc: are east coast song lyrics
+      neg_desc: are west coast song lyrics
+      pos_class:
+      - west_coast
+      neg_class:
+      - east_coast
+      example_hypotheses:
+      - talks about sunshine
+      - mentions Los Angeles
+      - mentions California
+    uk_france:
+      pos_desc: are UK lyrics
+      neg_desc: are French lyrics
+      pos_class:
+      - uk
+      neg_class:
+      - france
+      example_hypotheses:
+      - mentions everyday struggles
+      - is not about relationships
+  flip: true
+- generation: how many views the song received on Genius
+  applications:
+  - target: the topics that a pop audience looks for in a song
+    user: a record label looking for the next big hit
+    example_hypotheses:
+    - mentions drugs, alcohol, and partying
+    - describes a journey or travel
+    - mentions controversial topics such as drugs or criminal activities
+    v2-origid: 121
+    purely_exploratory: false
+  - target: the artistic style that a pop audience looks for in a song
+    user: a record label looking for the next big hit
+    example_hypotheses:
+    - has a lot of energy, with a fast tempo
+    - uses repetitive phrases in the chorus
+    - contains lots of braggadocio
+    v2-origid: 2121
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    viewcount:
+      pos_desc: are highly viewed song lyrics
+      neg_desc: are song lyrics with moderate views
+      pos_class:
+      - high_views
+      neg_class:
+      - mid_views
+      example_hypotheses:
+      - talks about personal topics
+      - has a catchy rhyme
+  flip: true
+happy_moments:
+- generation: the age of the respondent
+  applications:
+  - target: what specific experiences make us happy as we grow older
+    user: a psychologist studying the effect of aging on happiness
+    example_hypotheses:
+    - involves doing physical activities, such as going to the park, working out,
+      or taking a walk
+    - references reunions with old friends
+    - references psychedelic experiences
+    v2-origid: 122
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    college_20s:
+      pos_desc: include self-reported happy moments from 18-21 year olds
+      neg_desc: include self-reported happy moments from 22-25 year olds
+      pos_class:
+      - 18-21
+      neg_class:
+      - 22-25
+      example_hypotheses:
+      - talks about traveling
+      - talks about new places
+      - talks about relationships
+      - mentions college
+    early_late_20s:
+      pos_desc: include self-reported happy moments from 22-25 year olds
+      neg_desc: include self-reported happy moments from 26-35 year olds
+      pos_class:
+      - 22-25
+      neg_class:
+      - 26-35
+      example_hypotheses:
+      - talks about traveling
+      - talks about new places
+      - mentions work
+    late_20s_30s:
+      pos_desc: include self-reported happy moments from 26-35 year olds
+      neg_desc: include self-reported happy moments from 36-45 year olds
+      pos_class:
+      - 26-35
+      neg_class:
+      - 36-45
+      example_hypotheses:
+      - mentions marraige
+      - does not mention children
+    30s_40s:
+      pos_desc: include self-reported happy moments from 36-45 year olds
+      neg_desc: include self-reported happy moments from 46+ year olds
+      pos_class:
+      - 36-45
+      neg_class:
+      - 46+
+      example_hypotheses:
+      - talks about children
+      - talks more about work
+  flip: true
+- generation: the type of happiness experienced (achivement, affection, bonding, enjoying
+    the moment, exercise, leisure, and nature) from crowdworker annotations
+  applications:
+  - target: which part of each experience makes people happy
+    user: a psychologist trying to precisely define types of emotions
+    example_hypotheses:
+    - refers to a moment of joy with an extended family member
+    - involves physical contact or expressions of physical affection
+    - mentions events that involve receiving gifts or presents
+    v2-origid: 126
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    affection_bonding:
+      pos_desc: include self-reported happy moments about affection
+      neg_desc: include self-reported happy moments about bonding
+      pos_class:
+      - affection
+      neg_class:
+      - bonding
+      example_hypotheses:
+      - talks more about relatives
+      - talk more about love
+    enjoying_leisure:
+      pos_desc: include self-reported happy moments about enjoying the moment
+      neg_desc: include self-reported happy moments about leisure
+      pos_class:
+      - enjoy_the_moment
+      neg_class:
+      - leisure
+      example_hypotheses:
+      - talks more about experiences
+      - talks less about relaxing
+  flip: true
+- generation: the gender or familial status of the respondent
+  applications:
+  - target: how interpersonal relationships shape happiness
+    user: a sociologist studying intimate relationships
+    example_hypotheses:
+    - involve small acts of self-care or indulgence
+    - mentions activities related to home maintenance or renovation
+    - mentions successful experiences, such as getting a job or a good deal
+    v2-origid: 131
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    gender:
+      pos_desc: include self-reported happy moments from males
+      neg_desc: include self-reported happy moments from females
+      pos_class:
+      - male
+      neg_class:
+      - female
+      example_hypotheses:
+      - talks about work
+      - talks about friends
+      - mentions sports
+    marraige:
+      pos_desc: include self-reported happy moments from unmarried people
+      neg_desc: include self-reported happy moments from married people
+      pos_class:
+      - single
+      neg_class:
+      - married
+      example_hypotheses:
+      - talks about dating
+      - talks about relatives
+      - mentions friends
+    parenthood:
+      pos_desc: include self-reported happy moments from parents
+      neg_desc: include self-reported happy moments from non-parents
+      pos_class:
+      - parent
+      neg_class:
+      - not_parent
+      example_hypotheses:
+      - talks about children
+      - talks about spouses
+      - mentions a baby
+    separation_divorce:
+      pos_desc: include self-reported happy moments from people who have separated
+        (without divorcing)
+      neg_desc: include self-reported happy moments from divorced people
+      pos_class:
+      - separated
+      neg_class:
+      - divorced
+      example_hypotheses:
+      - talks about seeing children
+      - mentions friends
+      - does not mention dates
+  flip: true
+- generation: the respondent's nationality
+  applications:
+  - target: what specific experiences or topics make people happy across the world
+    user: a demographer comparing the values of different cultures
+    example_hypotheses:
+    - involves physical accomplishments, such as running or hitting a record time
+      on a mile
+    - mentions material possessions, such as cars and phones
+    - mention activities related to the church
+    v2-origid: 134
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    usa_canada:
+      pos_desc: include self-reported happy moments from the United States
+      neg_desc: include self-reported happy moments from Canada
+      pos_class:
+      - usa
+      neg_class:
+      - canada
+      example_hypotheses:
+      - talks about friends
+      - does not discuss nature
+      - talks about consumption
+      - mentions sports
+    usa_india:
+      pos_desc: include self-reported happy moments from the United States
+      neg_desc: include self-reported happy moments from India
+      pos_class:
+      - usa
+      neg_class:
+      - india
+      example_hypotheses:
+      - talks about friends
+      - talks about leisure
+      - talks less about others
+      - does not mention family
+    usa_venezuela:
+      pos_desc: include self-reported happy moments from the United States
+      neg_desc: include self-reported happy moments from Venezuela
+      pos_class:
+      - usa
+      neg_class:
+      - venezuela
+      example_hypotheses:
+      - does not mention money
+      - mentions relationships
+      - does not talk about nature
+  flip: true
+immigration_speeches:
+- generation: who gave the speech
+  applications:
+  - target: the specific beliefs of different politicians on immigration
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - mentions the need to clean up the Social Security database and Immigration Service
+      database
+    - argues that the SAW Program should be utilized to address labor shortages
+    - mentions the need for the President to report to Congress on the cost of State
+      incarceration of illegal aliens
+    v2-origid: 147
+    purely_exploratory: false
+  - target: the stereotypes and metaphors different politicians appeal to
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - mentions Dreamers and their plight
+    - calls for protection of children from deportation
+    - mentions the high dropout rate among Hispanic/Latino students
+    v2-origid: 148
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    trump_obama:
+      pos_desc: are speeches given by President Trump
+      neg_desc: are speeches given by President Obama
+      pos_class:
+      - speaker_trump
+      neg_class:
+      - speaker_obama
+      example_hypotheses:
+      - is hostile towards immigrants
+      - supports a stronger border
+    trump_pence:
+      pos_desc: are speeches given by President Trump
+      neg_desc: are speeches given by Vice President Pence
+      pos_class:
+      - speaker_trump
+      neg_class:
+      - speaker_pence
+      example_hypotheses:
+      - is outwardly hostile towards immigrants
+      - focuses on Mexican immigrants
+      - mentions the border
+    bush_jr_sr:
+      pos_desc: are speeches given by President Bush Jr.
+      neg_desc: are speeches given by President Bush Sr.
+      pos_class:
+      - speaker_bush_jr
+      neg_class:
+      - speaker_bush_sr
+      example_hypotheses:
+      - mentions the Middle East
+      - talks about terrorism
+    bush_sr_reagan:
+      pos_desc: are speeches given by President Bush Sr.
+      neg_desc: are speeches given by President Reagan
+      pos_class:
+      - speaker_bush_sr
+      neg_class:
+      - speaker_reagan
+      example_hypotheses:
+      - is warmer towards immigrants
+      - mentions the need for high-skilled labor
+      - talks about Asian immigrants
+    clinton_obama:
+      pos_desc: are speeches given by President Bush Jr.
+      neg_desc: are speeches given by Bill
+      pos_class:
+      - speaker_clinton
+      neg_class:
+      - speaker_obama
+      example_hypotheses:
+      - is hostile towards immigrants
+      - talks about border security
+    sessions_kennedy:
+      pos_desc: are speeches given by Congressperson Jeff Sessions
+      neg_desc: are speeches given by Congressperson Edward Kennedy
+      pos_class:
+      - con_speaker_sessions
+      neg_class:
+      - con_speaker_kennedy
+      example_hypotheses:
+      - is hostile towards immigrants
+      - mentions the Southern border
+      - uses strong language
+    durbin_simpson:
+      pos_desc: are speeches given by Congressperson Richard Durbin
+      neg_desc: are speeches given by Congressperson Mike Simpson
+      pos_class:
+      - con_speaker_durbin
+      neg_class:
+      - con_speaker_simpson
+      example_hypotheses:
+      - mentions the DREAM act
+      - is more welcoming towards immigrants
+      - supports President Obama
+  flip: true
+- generation: whether the statement was written or spoken
+  applications:
+  - target: how the speaking style of politicians changes depending on medium
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - uses more personal anecdotes
+    - uses more repetition or rhetorical devices
+    - 'uses the phrase ''illegal aliens'' more often '
+    v2-origid: 149
+    purely_exploratory: false
+  pair_type: format
+  pairs:
+    trump_written_spoken:
+      pos_desc: are spoken speeches delivered by President Trump
+      neg_desc: are written statements by President Trump
+      pos_class:
+      - speaker_trump_spoken
+      neg_class:
+      - speaker_trump_written
+      example_hypotheses:
+      - is less hostile
+      - uses more sophisticated language
+      - expresses moderation
+    obama_written_spoken:
+      pos_desc: are written statements by President Obama
+      neg_desc: are spoken speeches delivered by President Obama
+      pos_class:
+      - speaker_obama_written
+      neg_class:
+      - speaker_obama_spoken
+      example_hypotheses:
+      - argues for specific policies
+      - is less positive
+  flip: true
+- generation: when the statement was made
+  applications:
+  - target: how different events and eras influence the general perception of immigrants
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - emphasizes the importance of providing aid and assistance to Italian immigrants
+    - mentions the importance of immigrants in the military
+    - references the opinion of religious leaders about immigration laws
+    v2-origid: 165
+    purely_exploratory: false
+  - target: the dominant stereotypes and metaphors of each time era
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - uses language that paints immigrants in a positive light, such as describing
+      their contribution to society
+    - uses metaphors that describe immigrants as a burden, such as using words like
+      'flood' or 'invasion'
+    - describes the situation of immigrants in a negative way, or paints them as a
+      'problem'
+    v2-origid: 162
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    obama_term:
+      pos_desc: are statements by President Obama in his second term
+      neg_desc: are statements by President Obama in his first term
+      pos_class:
+      - speaker_obama_01-26-2013_05-07-2017
+      neg_class:
+      - speaker_obama_01-26-2009_01-25-2013
+      example_hypotheses:
+      - is more firm on border security
+      - is less optimistic
+    bush_911:
+      pos_desc: are statements by President Bush Jr. after 9/11
+      neg_desc: are statements by President Bush Jr. prior to 9/11
+      pos_class:
+      - speaker_bush_jr_01-20-2001_09-10-2001
+      neg_class:
+      - speaker_obama_01-26-2009_01-25-2013
+      example_hypotheses:
+      - talks about terrorism
+      - mentions the Middle East
+    chinese_early_mid:
+      pos_desc: are statements about Chinese immigrants between 1873 and 1934
+      neg_desc: are statements about Chinese immigrants between 1935 and 1956
+      pos_class:
+      - period_early_chinese
+      neg_class:
+      - period_mid_chinese
+      example_hypotheses:
+      - talks about foreigners disparagingly
+      - mentions aliens
+    chinese_late_mid:
+      pos_desc: are statements about Chinese immigrants between 1957 and 2020
+      neg_desc: are statements about Chinese immigrants between 1935 and 1956
+      pos_class:
+      - period_late_chinese
+      neg_class:
+      - period_mid_chinese
+      example_hypotheses:
+      - talks about national security threats
+    mexican_early_mid:
+      pos_desc: are statements about Mexican immigrants between 1873 and 1934
+      neg_desc: are statements about Mexican immigrants between 1935 and 1956
+      pos_class:
+      - period_early_mexican
+      neg_class:
+      - period_mid_mexican
+      example_hypotheses:
+      - is hostile towards immigrants
+      - talks about labor
+    mexican_late_mid:
+      pos_desc: are statements about Mexican immigrants between 1957 and 2020
+      neg_desc: are statements about Mexican immigrants between 1935 and 1956
+      pos_class:
+      - period_late_mexican
+      neg_class:
+      - period_mid_mexican
+      example_hypotheses:
+      - talks about illegal immigration
+      - is more hostile towards immigrants
+      - mentions crime
+    italian_early_mid:
+      pos_desc: are statements about Italian immigrants between 1873 and 1934
+      neg_desc: are statements about Italian immigrants between 1935 and 1956
+      pos_class:
+      - period_early_italian
+      neg_class:
+      - period_mid_italian
+      example_hypotheses:
+      - mentions crime
+      - mentions the mafia
+      - is hostile
+    italian_late_mid:
+      pos_desc: are statements about Italian immigrants between 1957 and 2020
+      neg_desc: are statements about Italian immigrants between 1935 and 1956
+      pos_class:
+      - period_late_italian
+      neg_class:
+      - period_mid_italian
+      example_hypotheses:
+      - is warm towards immigrants
+      - talks about Europe
+      - mentions culture
+  flip: true
+- generation: whether the speaker is in favor of immigration
+  applications:
+  - target: what specific justifications people in favor of immigration use
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - mentions equality and justice for all
+    - highlights the industriousness of immigrants
+    - highlights the unfairness of discrimination against immigrants
+    v2-origid: 167
+    purely_exploratory: false
+  pair_type: sentiment
+  pairs:
+    early_pro_anti:
+      pos_desc: are statements supportive of immigration between 1873 and 1934
+      neg_desc: are statements opposed to immigration between 1873 and 1934
+      pos_class:
+      - period_early_pro
+      neg_class:
+      - period_early_anti
+      example_hypotheses:
+      - mentions economic benefits
+      - talks about labor
+    mid_pro_anti:
+      pos_desc: are statements supportive of immigration between 1935 and 1956
+      neg_desc: are statements opposed to immigration between 1935 and 1956
+      pos_class:
+      - period_mid_pro
+      neg_class:
+      - period_mid_anti
+      example_hypotheses:
+      - mentions humanitarian needs
+      - expresses empathy
+      - mentions World War II refugees
+    late_pro_anti:
+      pos_desc: are statements supportive of immigration between 1957 and 2020
+      neg_desc: are statements opposed to immigration between 1957 and 2020
+      pos_class:
+      - period_late_pro
+      neg_class:
+      - period_late_anti
+      example_hypotheses:
+      - mentions high-skilled workers
+      - talks about H1B visas
+      - mentions refugees
+  flip: true
+- generation: the political party of the speaker
+  applications:
+  - target: the specific policy priorities of each political party
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - mentions the need for a wall at the border
+    - mentions the need to record who is entering the United States
+    - calls for better background checks and welfare checks for immigrants
+    v2-origid: 172
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    early_dem_rep:
+      pos_desc: are statements by Democrats on immigration between 1873 and 1934
+      neg_desc: are statements by Republicans on immigration between 1873 and 1934
+      pos_class:
+      - period_early_democrat
+      neg_class:
+      - period_early_republican
+      example_hypotheses:
+      - mentions economic benefits
+      - talks about labor
+    mid_dem_rep:
+      pos_desc: are statements by Democrats on immigration between 1935 and 1956
+      neg_desc: are statements by Republicans on immigration between 1935 and 1956
+      pos_class:
+      - period_mid_democrat
+      neg_class:
+      - period_mid_republican
+      example_hypotheses:
+      - mentions humanitarian needs
+      - mentions World War II
+      - talks about labor
+    late_dem_rep:
+      pos_desc: are statements by Democrats on immigration between 1957 and 2020
+      neg_desc: are statements by Republicans on immigration between 1957 and 2020
+      pos_class:
+      - period_late_democrat
+      neg_class:
+      - period_late_republican
+      example_hypotheses:
+      - mentions high-skilled workers
+      - mentions humanitarian obligations
+      - supports immigration reform
+  flip: true
+- generation: the geographic region of the speaker's home
+  applications:
+  - target: how people from different parts of the United States feel about immigrants
+    user: a political scientist studying stances on immigration
+    example_hypotheses:
+    - argues for the importance of creating a safe and orderly flow of refugees
+    - discusses efforts to improve the health of migrant workers
+    - focuses on the humanitarian aspects of immigration
+    v2-origid: 174
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    late_northern_western:
+      pos_desc: are statements by Northerners on immigration between 1957 and 2020
+      neg_desc: are statements by Westerners on immigration between 1957 and 2020
+      pos_class:
+      - period_late_northern
+      neg_class:
+      - period_late_western
+      example_hypotheses:
+      - is more supportive of immigration
+      - does not mention Mexico
+      - talks positively about Europeans
+    late_northern_southern:
+      pos_desc: are statements by Northerners on immigration between 1957 and 2020
+      neg_desc: are statements by Southerners on immigration between 1957 and 2020
+      pos_class:
+      - period_late_northern
+      neg_class:
+      - period_late_southern
+      example_hypotheses:
+      - is positive towards immigration
+      - does not mention the border
+      - talks about refugees
+    late_western_southern:
+      pos_desc: are statements by Westerners on immigration between 1957 and 2020
+      neg_desc: are statements by Southerners on immigration between 1957 and 2020
+      pos_class:
+      - period_late_western
+      neg_class:
+      - period_late_southern
+      example_hypotheses:
+      - are more warm towards immigration
+      - mentions farm labor
+  flip: true
+kickstarter:
+- generation: whether the fundraiser succeeded or failed
+  applications:
+  - target: what kinds of companies succeed
+    user: an angel investor
+    example_hypotheses:
+    - focuses on technology
+    - addresses a social or environmental issue
+    - mentions a specific target demographic or market
+    - uses vivid language to evoke emotion
+    - uses a catchy title that draws people in
+    - mentions a specific target demographic or market
+    - uses words associated with success, such as 'premium', 'revolutionary', or 'innovative'
+    - uses emotionally charged words
+    - has a clear goal and timeline for completion
+    v2-origid: 176
+    purely_exploratory: false
+  - target: how successful fundraisers market themselves
+    user: an angel investor
+    example_hypotheses:
+    - focuses on technology
+    - addresses a social or environmental issue
+    - mentions a specific target demographic or market
+    - uses vivid language to evoke emotion
+    - uses a catchy title that draws people in
+    - mentions a specific target demographic or market
+    - uses words associated with success, such as 'premium', 'revolutionary', or 'innovative'
+    - uses emotionally charged words
+    - has a clear goal and timeline for completion
+    v2-origid: 176
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    state_successful_failed:
+      pos_desc: are names of startups that succeeded
+      neg_desc: are names of startups that failed
+      pos_class:
+      - state_successful
+      neg_class:
+      - state_failed
+      example_hypotheses:
+      - is about a creative work
+      - is a personal hobby
+  flip: false
+microedit_humor:
+- generation: how funny annotators found the sentences
+  applications:
+  - target: what types of humor people find funny
+    user: a rhetoric researcher studying the nature of humor
+    example_hypotheses:
+    - uses slang or colloquial language
+    - include unexpected elements, such as a twist in the plot
+    - include a parody of a popular trend, such as making fun of a celebrity
+    v2-origid: 177
+    purely_exploratory: false
+  - target: which specific writing features make a joke not funny
+    user: a rhetoric researcher studying the nature of humor
+    example_hypotheses:
+    - rely more on wordplay than clever puns
+    - involves comparisons of incongruous objects
+    - refers to current events or popular culture
+    v2-origid: 178
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    funny_very_funny:
+      pos_desc: are sentences edited to be somewhat funny
+      neg_desc: are sentences edited to be very funny
+      pos_class:
+      - funny
+      neg_class:
+      - very_funny
+      example_hypotheses:
+      - is not as surprising surprising
+      - uses slapstick humor
+      - uses profanity
+      - relies on wordplay
+    unfunny_funny:
+      pos_desc: are edited sentences that are not funny
+      neg_desc: are edited sentences that are funny
+      pos_class:
+      - unfunny
+      neg_class:
+      - funny
+      example_hypotheses:
+      - is incoherent
+      - has a predictable punchline
+      - is confusing
+  flip: true
+monster_jobs:
+- generation: where the job was posted
+  applications:
+  - target: the requirements of jobs in different cities
+    user: a recent graduate trying to figure out which city to look for jobs in
+    example_hypotheses:
+    - mentions a Master's degree or Ph.D in a related field
+    - mentions the need to have experience in a public accounting firm or in industry
+    - mentions the need for a valid driver's license
+    v2-origid: 181
+    purely_exploratory: false
+  - target: the benefits of jobs in different cities
+    user: a recent graduate trying to figure out which city to look for jobs in
+    example_hypotheses:
+    - offer work-from-home options
+    - mention paid parental leave
+    - offers insurance benefits
+    v2-origid: 2181
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    atl_tampa:
+      pos_desc: are job postings in Atlanta, GA
+      neg_desc: are job postings in Tampa, FL
+      pos_class:
+      - atlanta
+      neg_class:
+      - tampa
+      example_hypotheses:
+      - offers blue collar jobs
+      - mentions service jobs
+      - offers a job at a casino
+    ca_tx:
+      pos_desc: are job postings in California
+      neg_desc: are job postings in Texas
+      pos_class:
+      - sf
+      - la
+      - berkeley
+      neg_class:
+      - dallas
+      - houston
+      - austin
+      example_hypotheses:
+      - offers tech related jobs
+      - offers more benefits
+      - offers greater compensation
+    sf_nyc:
+      pos_desc: are job postings in New York City
+      neg_desc: are job postings in San Francisco
+      pos_class:
+      - nyc
+      neg_class:
+      - sf
+      example_hypotheses:
+      - offers more finance jobs
+      - talks more about location
+      - talks about consulting
+      - does not mention technology
+  flip: true
+movie_tmdb:
+- generation: how successful the movie was
+  applications:
+  - target: which genres movie-goers seem to like
+    user: a movie director planning a new film
+    example_hypotheses:
+    - includes a supernatural element such as a ghost or time travel
+    - is set in a dystopian world
+    - contains references to ancient mythology or legends
+    v2-origid: 184
+    purely_exploratory: false
+  - target: what specific plot devices are more popular to movie-goers
+    user: a movie director planning a new film
+    example_hypotheses:
+    - uses humor to lighten the mood
+    - involves a heroic struggle against a powerful enemy
+    - has a romantic subplot
+    v2-origid: 187
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    pop_low_mid:
+      pos_desc: describe unpopular movies
+      neg_desc: describe average movies
+      pos_class:
+      - pop_low
+      neg_class:
+      - pop_mid
+      example_hypotheses:
+      - is a documentary
+      - is a remake
+      - has a strange plot
+    pop_high_mid:
+      pos_desc: describe popular movies
+      neg_desc: describe average movies
+      pos_class:
+      - pop_high
+      neg_class:
+      - pop_mid
+      example_hypotheses:
+      - mentions a superhero
+      - talks more about surprise
+      - is a horror plot
+    revenue_low_mid:
+      pos_desc: describe low-grossing movies
+      neg_desc: describe average-grossing movies
+      pos_class:
+      - revenue_low
+      neg_class:
+      - revenue_mid
+      example_hypotheses:
+      - is a documentary
+      - is a remake
+      - has a strange plot
+    revenue_high_mid:
+      pos_desc: describe high-grossing movies
+      neg_desc: describe average-grossing movies
+      pos_class:
+      - revenue_high
+      neg_class:
+      - revenue_mid
+      example_hypotheses:
+      - mentions a superhero
+      - talks more about surprise
+      - is a horror plot
+  flip: false
+- generation: how long the movie is
+  applications:
+  - target: how the length of the movie constrains the plot
+    user: a film theorist
+    example_hypotheses:
+    - contains a plot twist with a betrayal
+    - features a romance between the main characters
+    - involves a heroic struggle against a powerful enemy
+    v2-origid: 2184
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    runtime_low_mid:
+      pos_desc: describe short movies
+      neg_desc: describe average-length movies
+      pos_class:
+      - pop_low
+      neg_class:
+      - pop_mid
+    runtime_high_mid:
+      pos_desc: describe long movies
+      neg_desc: describe average-length movies
+      pos_class:
+      - pop_high
+      neg_class:
+      - pop_mid
+  flip: false
+- generation: how big the movie's budget was
+  applications:
+  - target: the influence of funding on movie plot
+    user: a film theorist
+    example_hypotheses:
+    - contains a plot twist with a betrayal
+    - features a romance between the main characters
+    - involves a heroic struggle against a powerful enemy
+    v2-origid: 3184
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    runtime_low_mid:
+      pos_desc: describe low-budget movies
+      neg_desc: describe average-budget movies
+      pos_class:
+      - budget_low
+      neg_class:
+      - budget_mid
+    runtime_high_mid:
+      pos_desc: describe high-budget movies
+      neg_desc: describe average-budget movies
+      pos_class:
+      - budget_high
+      neg_class:
+      - budget_mid
+  flip: false
+- generation: when the movie was released
+  applications:
+  - target: how movie plots have evolved over time
+    user: a historian
+    example_hypotheses:
+    - describes a dystopian future with technology
+    - features a romance between the main characters
+    - involves a heroic struggle against a powerful enemy
+    v2-origid: 4184
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    runtime_low_mid:
+      pos_desc: describe movies from before 2000
+      neg_desc: describe movies from after 2000
+      pos_class:
+      - pre_2000
+      neg_class:
+      - post_2000
+  flip: FALSE
+- generation: who produced the movie
+  applications:
+  - target: what types of movies are produced by our competitors
+    user: a business analyst at a movie company
+    example_hypotheses:
+    - describes a dystopian future with technology
+    - features a romance between the main characters
+    - involves a heroic struggle against a powerful enemy
+    v2-origid: 5184
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    company_mgm_warner:
+      pos_desc: describe movies produced by MGM
+      neg_desc: describe movies produced by Warner
+      pos_class:
+      - company_mgm
+      neg_class:
+      - company_warner
+    company_paramount_fox:
+      pos_desc: describe movies produced by Paramount
+      neg_desc: describe movies produced by Fox
+      pos_class:
+      - company_paramount
+      neg_class:
+      - company_fox
+    company_fox_universal:
+      pos_desc: describe movies produced by Fox
+      neg_desc: describe movies produced by Universal
+      pos_class:
+      - company_fox
+      neg_class:
+      - company_universal
+    company_single_multiple:
+      pos_desc: describe movies produced by multiple companies
+      neg_desc: describe movies produced by a single company
+      pos_class:
+      - multiple_companies
+      neg_class:
+      - single_company
+  flip: true
+news_popularity:
+- generation: popularity, which is measured by how many times the story was shared
+  applications:
+  - target: what specific topics cause people to read or share an article, so I know
+      what to write about
+    user: a journalist
+    example_hypotheses:
+    - mentions economic indicators, such as GDP and inflation
+    - references President Trump's policies
+    - mentions the potential risks of oil prices
+    v2-origid: 188
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    economy_pop_unpop:
+      pos_desc: are popular articles about the economy
+      neg_desc: are unpopular articles about the economy
+      pos_class:
+      - economy_pop
+      neg_class:
+      - economy_unpop
+      example_hypotheses:
+      - is about an economic shock
+      - talks about the U.S. economy
+      - mentions gas prices
+    microsoft_pop_unpop:
+      pos_desc: are popular articles about Microsoft
+      neg_desc: are unpopular articles about Microsoft
+      pos_class:
+      - microsoft_pop
+      neg_class:
+      - microsoft_unpop
+      example_hypotheses:
+      - talks about user privacy
+      - talks about Zuckerberg
+      - is disparaging
+    obama_pop_unpop:
+      pos_desc: are popular articles about Obama
+      neg_desc: are unpopular articles about Obama
+      pos_class:
+      - obama_pop
+      neg_class:
+      - obama_unpop
+      example_hypotheses:
+      - talks about Obama negatively
+      - talks about Afghanistan
+      - mentions Obamacare
+  flip: true
+- generation: the positivity or negativity, measured by whether it received more likes
+    or dislikes
+  applications:
+  - target: what specific topics are perceived positively, so I know what to write
+      about
+    user: a journalist
+    example_hypotheses:
+    - refers to Obama's health care policies, such as the Affordable Care Act
+    - mentions Obama's efforts to address climate change
+    - mentions Obama's foreign policy approach
+    v2-origid: 191
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    obama_pos_neg:
+      pos_desc: are positive articles about Obama
+      neg_desc: are negative articles about Obama
+      pos_class:
+      - obama_pos
+      neg_class:
+      - obama_neg
+      example_hypotheses:
+      - talks about Obamacare
+      - talks about the economy
+  flip: true
+nli_benchmarks:
+- generation: which dataset the example is from
+  applications:
+  - target: any differences between these datasets which might influence performance
+    user: a natural language processing researcher measuring language models on different
+      tasks
+    purely_exploratory: true
+  pair_type: dataset
+  pairs:
+    anli_r1_r2_premise:
+      pos_desc: are ANLI dataset Round 1 premises
+      neg_desc: are  ANLI dataset Round 2 premises
+      pos_class:
+      - anli_r1_premise
+      neg_class:
+      - anli_r2_premise
+      example_hypotheses: []
+    mnli_match:
+      pos_desc: are MNLI dataset hypotheses with mismatched annotations
+      neg_desc: are MNLI dataset hypotheses with matched annotations
+      pos_class:
+      - mnli_mismatched_premise
+      neg_class:
+      - mnli_matched_premise
+      example_hypotheses: []
+    wanli_anil_r2_r3_premise:
+      pos_desc: are ANLI dataset Round 2 premises
+      neg_desc: are  ANLI dataset Round 3 premises
+      pos_class:
+      - anli_r2_premise
+      neg_class:
+      - anli_r3_premise
+      example_hypotheses: []
+    wanli_anli_premise:
+      pos_desc: are WANLI dataset premises
+      neg_desc: are ANLI dataset premises
+      pos_class:
+      - wanli_premise
+      neg_class:
+      - anli_r1_premise
+      - anli_r2_premise
+      - anli_r3_premise
+      example_hypotheses: []
+    enchmarks_wanli_anli_r2_r3_hypothesis:
+      pos_desc: are ANLI dataset Round 1 hypotheses
+      neg_desc: are  ANLI dataset Round 2 hypotheses
+      pos_class:
+      - anli_r1_hypothesis
+      neg_class:
+      - anli_r2_hypothesis
+      example_hypotheses: []
+    wanli_hans_premise:
+      pos_desc: are WANLI dataset premises
+      neg_desc: are HANS dataset premises
+      pos_class:
+      - wanli_premise
+      neg_class:
+      - hans_premise
+      example_hypotheses: []
+    wanli_mnli_premise:
+      pos_desc: are WANLI dataset premises
+      neg_desc: are MNLI dataset premises
+      pos_class:
+      - wanli_premise
+      neg_class:
+      - mnli_premise
+      example_hypotheses: []
+    wanli_qnli_hypothesis:
+      pos_desc: are MNLI dataset hypotheses with mismatched annotations
+      neg_desc: are MNLI dataset hypotheses with matched annotations
+      pos_class:
+      - mnli_mismatched_hypothesis
+      neg_class:
+      - mnli_matched_hypothesis
+      example_hypotheses: []
+    wanli_qnli_premise:
+      pos_desc: are WANLI dataset premises
+      neg_desc: are QNLI dataset premises
+      pos_class:
+      - wanli_premise
+      neg_class:
+      - qnli_premise
+      example_hypotheses: []
+  flip: true
+npt_conferences:
+- generation: which year the report was published
+  applications:
+  - target: what specific topics dominated NPT discussions across time
+    user: a political scientist studying the history of the NPT
+    example_hypotheses:
+    - discusses the need for arms reduction talks between the US and Russia
+    - calls for the accession of all states to the International Convention for the
+      Suppression of Acts of Nuclear Terrorism and to the amended Convention on the
+      Physical Protection of Nuclear Material
+    - highlights the importance of the IAEA Comprehensive Safeguards as the NPT's
+      only verification mechanism
+    v2-origid: 202
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    pre_post_2008:
+      pos_desc: are NPT conference reports before 2008
+      neg_desc: are NPT conference reports between 2008 and 2012
+      pos_class:
+      - pre_2008
+      neg_class:
+      - btw_2008_2012
+      example_hypotheses:
+      - mentions Iran
+      - mentions 9/11
+      - talks less about the economy
+    pre_post_2012:
+      pos_desc: are NPT conference reports between 2008 and 2012
+      neg_desc: are NPT conference reports after 2012
+      pos_class:
+      - btw_2008_2012
+      neg_class:
+      - post_2012
+      example_hypotheses:
+      - mentions Russia
+      - is worried
+      - talks about hypersonic missiles
+  flip: true
+open_deception:
+- generation: whether subjects were told to lie
+  applications:
+  - target: the specific speaking styles of liars
+    user: a rhetoric researcher studying the effect of lying on speaking style
+    example_hypotheses:
+    - uses descriptive language
+    - uses language that is more specific than general
+    - uses language that is more concrete than abstract
+    v2-origid: 203
+    purely_exploratory: false
+  pair_type: intent
+  pairs:
+    lie_truth:
+      pos_desc: are random truth statements
+      neg_desc: are random false statements
+      pos_class:
+      - lie
+      neg_class:
+      - truth
+      example_hypotheses:
+      - talks about themselves
+      - uses extreme adjectives
+      - is a broad generalization
+  flip: true
+open_review:
+- generation: the rating from paper reviewers
+  applications:
+  - target: the specific writing styles of good abstracts, so I know how to write
+      my abstract
+    user: a young researcher who hopes to get published
+    example_hypotheses:
+    - uses technical language, such as mathematical equations or scientific terms
+    - concludes with a summary of the main findings
+    - contains detailed, technical descriptions of a method or process
+    v2-origid: 206
+    purely_exploratory: false
+  - target: the research areas of successful papers, so I know what to study
+    user: a young researcher picking a topic
+    example_hypotheses:
+    - proposes a method for learning interpretable representations
+    - uses language to transfer natural language methods
+    - utilizes multi-agent reinforcement learning techniques
+    v2-origid: 207
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    good_bad:
+      pos_desc: are good journal submissions
+      neg_desc: are bad journal submissions
+      pos_class:
+      - good_papers
+      neg_class:
+      - bad_papers
+      example_hypotheses:
+      - is clearer
+      - provides more equations
+      - talks about existing literature
+    great_good:
+      pos_desc: are good journal submissions
+      neg_desc: are very good journal submissions
+      pos_class:
+      - great_papers
+      neg_class:
+      - good_papers
+      example_hypotheses:
+      - expresses surprise
+      - introduces a benchmark
+      - introduces a new technique
+  flip: false
+oral_histories:
+- generation: the race of the narrator
+  applications:
+  - target: the specific struggles of people of different races
+    user: a sociologist studying how race affects living conditions
+    example_hypotheses:
+    - describes stories of sexual harassment/assault in the minority community
+    - mentions the State's role in violence
+    - mentions the prevalence of child sexual abuse
+    v2-origid: 208
+    purely_exploratory: false
+  - target: how people of different races feel about America
+    user: a sociologist studying how race affects living conditions
+    example_hypotheses:
+    - expresses spite and hatred towards the government
+    - discusses the importance of self-advocacy and resilience to survive
+    - is optimistic about gaining rights
+    v2-origid: 2208
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    asian_white:
+      pos_desc: are oral histories of Asian people
+      neg_desc: are oral histories of white people
+      pos_class:
+      - asian
+      neg_class:
+      - white
+      example_hypotheses:
+      - talks more about racism
+      - talks more about civil rights
+      - mentions jobs
+    black_white:
+      pos_desc: are oral histories of black people
+      neg_desc: are oral histories of white people
+      pos_class:
+      - black
+      neg_class:
+      - white
+      example_hypotheses:
+      - talks more about racism
+      - talks more about civil rights
+      - discusses violence
+  flip: true
+- generation: the education level of the narrator
+  applications:
+  - target: the specific experiences and struggles of people of different education
+      levels
+    user: a sociologist studying how education affects living conditions
+    example_hypotheses:
+    - mentions more experiences of urban or metropolitan settings
+    - mentions professional experiences such as jobs, internships, and volunteer work
+    - talks about travel experiences
+    v2-origid: 210
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    college_educated:
+      pos_desc: are oral histories of people with college degrees
+      neg_desc: are oral histories of people without college degrees
+      pos_class:
+      - college_educated
+      neg_class:
+      - not_college_educated
+      example_hypotheses:
+      - talks more about academic jobs
+      - mentions civil rights
+      - uses eloquent language
+      - talks about protest
+  flip: true
+- generation: when the narrator lived
+  applications:
+  - target: the specific experiences and struggles of people across time
+    user: a historian writing about everyday people in different time periods
+    example_hypotheses:
+    - mentions an instance of touching someone without consent
+    - talks about the civil rights movement and its progress
+    - mentions the difficulties of finding or keeping a job
+    v2-origid: 211
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    pre_post_1930:
+      pos_desc: are oral histories of people born before 1930
+      neg_desc: are oral histories of people born between 1930 and 1950
+      pos_class:
+      - pre_1930
+      neg_class:
+      - 1930-50
+      example_hypotheses:
+      - talks more about racism
+      - talks about older presidents
+      - mentions World War I
+    pre_post_1950:
+      pos_desc: are oral histories of people born between 1930 and 1950
+      neg_desc: are oral histories of people born after 1950
+      pos_class:
+      - 1930-50
+      neg_class:
+      - post_1950
+      example_hypotheses:
+      - talks about the Great Depression
+      - mentions World War II
+      - talks about jobs
+  flip: true
+- generation: where the narrator lived
+  applications:
+  - target: the specific experiences and struggles of people in different regions
+      of the United States
+    user: a historian studying life in different regions of the United States
+    example_hypotheses:
+    - mentions the importance of family and traditional values
+    - refers to the Ku Klux Klan and other hate groups
+    - mentions the influence of religion and culture
+    v2-origid: 213
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    south_not_south:
+      pos_desc: are oral histories of people from the South
+      neg_desc: are oral histories of people not from the South
+      pos_class:
+      - south
+      neg_class:
+      - not_south
+      example_hypotheses:
+      - talks more about discrimination
+      - talks about economic struggles
+      - mentions migration
+  flip: true
+parenting_reddit_users:
+- generation: what year the post was made
+  applications:
+  - target: how parents' concerns and needs have changed over the years
+    user: a sociologist studying parenting
+    example_hypotheses:
+    - mentions the use of technology, such as video calls and online resources
+    - discusses the difficulty of finding childcare options due to COVID-19
+    - discusses the importance of wifi safety
+    v2-origid: 217
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    year_2016_2017:
+      pos_desc: are Reddit posts from 2017
+      neg_desc: are Reddit posts from 2016
+      pos_class:
+      - year_2017
+      neg_class:
+      - year_2016
+      example_hypotheses:
+      - argues for importance of breastfeeding
+    year_2017_2018:
+      pos_desc: are Reddit posts from 2018
+      neg_desc: are Reddit posts from 2017
+      pos_class:
+      - year_2018
+      neg_class:
+      - year_2017
+      example_hypotheses:
+      - argues for importance of breastfeeding
+    year_2018_2019:
+      pos_desc: are Reddit posts from 2019
+      neg_desc: are Reddit posts from 2018
+      pos_class:
+      - year_2019
+      neg_class:
+      - year_2018
+      example_hypotheses:
+      - argues for importance of breastfeeding
+    year_2019_2020:
+      pos_desc: are Reddit posts from 2020
+      neg_desc: are Reddit posts from 2019
+      pos_class:
+      - year_2020
+      neg_class:
+      - year_2019
+      example_hypotheses:
+      - argues for importance of breastfeeding
+  flip: true
+- generation: whether the parent is a mother or father
+  applications:
+  - target: the specific concerns and needs of mothers versus fathers
+    user: a sociologist studying parenting
+    example_hypotheses:
+    - expresses anxiety about leaving children with a caregiver
+    - discusses the need for preventive measures to protect children's health
+    - mentions worries about not having enough energy to take care of children
+    v2-origid: 218
+    purely_exploratory: false
+  - target: which topics mothers and fathers each bring up
+    user: a sociologist studying parenting
+    example_hypotheses:
+    - mentions the child's education and intellectual growth
+    - talks about potty training
+    - brings up celebrations, such as a gender reveal
+    v2-origid: 218
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    moms_dads:
+      pos_desc: are Reddit posts from mothers
+      neg_desc: are Reddit posts from fathers
+      pos_class:
+      - moms
+      neg_class:
+      - dads
+      example_hypotheses:
+      - talks about nursing
+      - talks about breastfeeding
+      - mentions problems with sleep
+  flip: true
+- generation: how long the user has been posting on parenting subreddits
+  applications:
+  - target: how different concerns and needs come up as a baby grows
+    user: a sociologist studying the process of raising a child
+    example_hypotheses:
+    - talks about balancing work and family life
+    - mentions the use of CIO (Cry It Out) methods for newborns
+    - mentions the use of verbal calming techniques to defuse fights
+    v2-origid: 221
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    month_1_month_3:
+      pos_desc: are posts from parents who have beem on Reddit for less than a month
+      neg_desc: are parenting posts from the first to third months on Reddit
+      pos_class:
+      - new
+      - 30_days
+      neg_class:
+      - 90_days
+      example_hypotheses:
+      - talks about giving birth
+      - mentions a hospital
+    month_3_year_1:
+      pos_desc: are Reddit posts from parents first 3 months on Reddit
+      neg_desc: are parenting Reddit posts from 3 months to 1 year
+      pos_class:
+      - new
+      - 30_days
+      - 90_days
+      neg_class:
+      - half_year
+      - 1_year
+      example_hypotheses:
+      - talks more about breastfeeding
+      - mentions a newborn
+    year_2_year_4:
+      pos_desc: are Reddit posts on parenting subreddits from accounts more than 5
+        years old
+      neg_desc: are Reddit posts on parenting subreddits from accounts less than 5
+        years old
+      pos_class:
+      - new
+      - 30_days
+      - 90_days
+      - half_year
+      - 1_year
+      - 2_years
+      - 3_years
+      - 4_years
+      neg_class:
+      - 5_years
+      example_hypotheses:
+      - gives advice
+      - talks about school
+  flip: true
+parenting_subreddits:
+- generation: which Subreddit the post is from
+  applications:
+  - target: the specific concerns and needs that come up on different topics
+    user: a parent trying to figure out which forum to post on
+    example_hypotheses:
+    - discusses mental health issues such as depression and anxiety
+    - mentions struggles with relationships with co-parent
+    - discusses loneliness and lack of social support
+    v2-origid: 223
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    breastfeeding_baby_food:
+      pos_desc: are Reddit posts froma Subreddit about breastfeeding
+      neg_desc: are Reddit posts from a Subreddit about baby food
+      pos_class:
+      - breastfeeding
+      neg_class:
+      - baby food
+      example_hypotheses:
+      - mentions feeling tired
+      - talks about younger children
+    parent_support_interaction:
+      pos_desc: are Reddit posts from a Subreddit about parents asking for support
+      neg_desc: are Reddit posts from a Subreddit about interacting with children
+      pos_class:
+      - parent support
+      neg_class:
+      - parent-child interaction
+      example_hypotheses:
+      - is concerned about work
+      - mentinos mental health
+    single_non_biological_parents:
+      pos_desc: are Reddit posts from a Subreddit about single parents
+      neg_desc: are Reddit posts from a Subreddit about non-biological parents
+      pos_class:
+      - sinle parents
+      neg_class:
+      - non-biological parents
+      example_hypotheses:
+      - talks more about finances
+      - mentions missing a father
+  flip: true
+poetry:
+- generation: who wrote the poem
+  applications:
+  - target: the specific topics that each poet writes about
+    user: a comparative literature researcher
+    example_hypotheses:
+    - uses personification to give life to inanimate objects and animals
+    - depicts a longing for the past
+    - contains references to mythology and classical literature
+    v2-origid: 226
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    poet_dickinson_tennyson:
+      pos_desc: are poems by Emily Dickinson
+      neg_desc: are poems by Alfred, Lord Tennyson
+      pos_class:
+      - poet_dickinson
+      neg_class:
+      - poet_tennyson
+      example_hypotheses:
+      - discusses death
+      - talks about identity
+    poet_wordsworth_shakespeare:
+      pos_desc: are poems by William Wordsworth
+      neg_desc: are poems by William Shakespeare
+      pos_class:
+      - poet_wordsworth
+      neg_class:
+      - poet_shakespeare
+      example_hypotheses:
+      - talks about nature
+      - comments on the nature of human experience
+  flip: true
+- generation: the subject of the poem
+  applications:
+  - target: the specific tones, themes, and motifs associated with each subject
+    user: a comparative literature researcher
+    example_hypotheses:
+    - discusses the consequences of sin
+    - includes descriptions of nature or the outdoors
+    - explores the idea of hope and possibility
+    v2-origid: 228
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    subject_commentary_history:
+      pos_desc: are poems that contain social commentary
+      neg_desc: are poems about history
+      pos_class:
+      - subject_commentary
+      neg_class:
+      - subject_history
+      example_hypotheses:
+      - is more opinionated
+      - is judgemental
+      - mentions injustice
+    subject_living_death:
+      pos_desc: are poems about living
+      neg_desc: are poems about death
+      pos_class:
+      - subject_living
+      neg_class:
+      - subject_death
+      example_hypotheses:
+      - are more positive in tone
+      - talks about joy
+    subject_relationships_family:
+      pos_desc: are poems about relationships
+      neg_desc: are poems about family
+      pos_class:
+      - subject_relationships
+      neg_class:
+      - subject_family
+      example_hypotheses:
+      - alludes to sex
+      - does not mention child
+    subject_time_nature:
+      pos_desc: are poems about time and brevity
+      neg_desc: are poems about nature
+      pos_class:
+      - subject_time
+      neg_class:
+      - subject_nature
+      example_hypotheses:
+      - discuss humans
+      - is regretful
+  flip: true
+political_ads:
+- generation: the age range of the ad's target demographic
+  applications:
+  - target: what messages political organizations send to children
+    user: a political scientist studying media
+    example_hypotheses:
+    - talks about humanitarain causes
+    - mentions the need for families
+    - advocates for political unity and bipartisanship
+    v2-origid: 2000
+    purely_exploratory: false
+  pair_type: demographic
+  flip: true
+  pairs:
+    adult_nonadults:
+      pos_desc: are shown to adults, teenagers, and children
+      neg_desc: are shown to only adults
+      pos_class:
+      - age_children
+      neg_class:
+      - age_adults
+    teenagers_children:
+      pos_desc: are shown to adults, teenagers, and children
+      neg_desc: are shown to only adults and teenagers
+      pos_class:
+      - age_teenagers
+      neg_class:
+      - age_children
+- generation: the gender of the ad's target demographic
+  applications:
+  - target: how political organizations appeal to men versus women
+    user: a political scientist studying gender and politics
+    example_hypotheses:
+    - talks about humanitarain causes
+    - mentions the need for families
+    - pushes for a stronger military
+    - advocates for political unity and bipartisanship
+    v2-origid: 2001
+    purely_exploratory: false
+  pair_type: demographic
+  flip: true
+  pairs:
+    female_any:
+      pos_desc: are shown to only females
+      neg_desc: are shown to any genders
+      pos_class:
+      - gender_female
+      neg_class:
+      - gender_any
+    male_any:
+      pos_desc: are shown to only males
+      neg_desc: are shown to any genders
+      pos_class:
+      - gender_male
+      neg_class:
+      - gender_any
+- generation: the country the ad is targeted at
+  applications:
+  - target: differences in political advertisement strategy across countries
+    user: a political scientist studying comparative government
+    example_hypotheses:
+    - asks for a small donation
+    - emphasizes the threat to the country's safety
+    - demonizes the political opponent
+    v2-origid: 2003
+    purely_exploratory: false
+  - target: policy priorities of parties in each country
+    user: a political scientist studying comparative government
+    example_hypotheses:
+    - mentions the threat of global warming
+    - pushes back against efforts to contain COVID-19
+    - brings up terrorism and other military threats
+    v2-origid: 2004
+    purely_exploratory: false
+  pair_type: location
+  flip: true
+  pairs:
+    us_cad:
+      pos_desc: are shown to Americans
+      neg_desc: are shown to Canadians
+      pos_class:
+      - location_us
+      neg_class:
+      - location_cad
+    uk_aus:
+      pos_desc: are shown to UK citizens
+      neg_desc: are shown to Australians
+      pos_class:
+      - location_uk
+      neg_class:
+      - location_aus
+    uk_us:
+      pos_desc: are shown to UK citizens
+      neg_desc: are shown to Americans
+      pos_class:
+      - location_uk
+      neg_class:
+      - location_us
+- generation: the state the ad is targeted at
+  applications:
+  - target: how parties target voters in different states
+    user: an American political scientist studying election messaging
+    example_hypotheses:
+    - brings up past mistakes of the opponent
+    - mentions issues related to abortion
+    - appeals to threats to democracy itself
+    v2-origid: 2005
+    purely_exploratory: false
+  pair_type: demographic
+  flip: true
+  pairs:
+    ca_ny:
+      pos_desc: are shown to Californians
+      neg_desc: are shown to New Yorkers
+      pos_class:
+      - location_ca
+      neg_class:
+      - location_nyc
+    ga_tx:
+      pos_desc: are shown to Georgians
+      neg_desc: are shown to Texans
+      pos_class:
+      - location_ga
+      neg_class:
+      - location_tx
+    ca_ga:
+      pos_desc: are shown to Georgians
+      neg_desc: are shown to Californians
+      pos_class:
+      - location_ga
+      neg_class:
+      - location_ca
+- generation: the reported interests of the ad's target demographic
+  applications:
+  - target: the arguments each party makes for each interest area
+    user: a political journalists reporting on party strategy
+    example_hypotheses:
+    - appeals to abortion rights
+    - disparages critical race theory in schools
+    - mentions a rise in crime under current leadership
+    v2-origid: 2006
+    purely_exploratory: false
+  pair_type: demographic
+  flip: true
+  pairs:
+    social_issues:
+      pos_desc: are ads targeting social issues from the Democratic party
+      neg_desc: are ads targeting social issues from the Republican party
+      pos_class:
+      - interest_social_issues_dem
+      neg_class:
+      - interest_social_issues_rep
+    politics:
+      pos_desc: are ads targeting politics from the Democratic party
+      neg_desc: are ads targeting politics issues from the Republican party
+      pos_class:
+      - interest_politics_dem
+      neg_class:
+      - interest_politics_rep
+    community_issues:
+      pos_desc: are ads targeting community issues from the Democratic party
+      neg_desc: are ads targeting community issues issues from the Republican party
+      pos_class:
+      - interest_community_issues_dem
+      neg_class:
+      - interest_community_issues_rep
+    education:
+      pos_desc: are ads targeting education from the Democratic party
+      neg_desc: are ads targeting education issues from the Republican party
+      pos_class:
+      - interest_education_dem
+      neg_class:
+      - interest_education_rep
+    family:
+      pos_desc: are ads targeting family from the Democratic party
+      neg_desc: are ads targeting family issues from the Republican party
+      pos_class:
+      - interest_family_dem
+      neg_class:
+      - interest_family_rep
+- generation: when the ad was shown
+  applications:
+  - target: which messages were salient in the U.S. during each period
+    user: an American journalist tracking political messaging over time
+    example_hypotheses:
+    - appeals to abortion rights
+    - disparages critical race theory in schools
+    - mentions a rise in crime under current leadership
+    v2-origid: 2007
+    purely_exploratory: false
+  pair_type: time
+  flip: true
+  pairs:
+    janmar_aprjun:
+      pos_desc: are American ads shown between January and March 2021
+      neg_desc: are American ads shown between July and September 2021
+      pos_class:
+      - time_21_jan_mar
+      neg_class:
+      - time_21_jul_sep
+radiology_diagnosis:
+- generation: whether medical experts agreed on a diagnosis
+  applications:
+  - target: what symptoms make experts more confident in a diagnosis
+    user: a medical student training to become a radiologist
+    example_hypotheses:
+    - describe mild or scattered lung densities
+    - clearly describes the lack of pneumonic abnormality
+    - mentions pleural effusion or adenopathy
+    v2-origid: 232
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    all_consensus_impression:
+      pos_desc: describe impressions of patients with consensus diagnoses
+      neg_desc: describe impressions of patients with conflicting diagnoses
+      pos_class:
+      - all_consensus_impression
+      neg_class:
+      - all_no_consensus_impression
+      example_hypotheses:
+      - mentions a fever
+      - lists many symptoms
+    cough_consensus_impression:
+      pos_desc: describe impressions of cough patients with consensus diagnoses
+      neg_desc: describe impressions of cough patients with conflicting diagnoses
+      pos_class:
+      - cough_consensus_impression
+      neg_class:
+      - cough_no_consensus_impression
+      example_hypotheses:
+      - dismisses more severe diseases
+      - does not mention fever
+  flip: true
+- generation: which diagnosis the patient was assigned
+  applications:
+  - target: which symptoms or histories suggest each diagnosis
+    user: a medical student training to become a radiologist
+    example_hypotheses:
+    - mentions a history of walking pneumonia
+    - mentions a repair of a duodenal web within the last month
+    - mentions a cough and congestion for a week
+    v2-origid: 233
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    cough_fever_history:
+      pos_desc: describe medical histories of patients with just a cough
+      neg_desc: describe medical histories of patients with a fever
+      pos_class:
+      - cough_history
+      neg_class:
+      - fever_history
+      example_hypotheses:
+      - mentions fewer comorbidities
+      - describes young patient
+    cough_pneumonia_impression:
+      pos_desc: describe impressions of patients with a cough
+      neg_desc: describe impressions of patients with a pneumonia, a lung inflamation
+      pos_class:
+      - cough_impression
+      neg_class:
+      - pneumonia_impression
+      example_hypotheses:
+      - suggests less severe cough
+      - does not mention fever
+    uti_vesicoureteral_reflux_impression:
+      pos_desc: describe impressions of patients with a urinary track infection
+      neg_desc: describe impressions of patients with vesicoureteral reflux, an abnormal
+        flow of urine
+      pos_class:
+      - uti_impression
+      neg_class:
+      - vesicoureteral_reflux_impression
+      example_hypotheses:
+      - discusses sources of infection
+      - does not mention fever
+  flip: true
+rate_my_prof:
+- generation: whether the lecturer is male or female
+  applications:
+  - target: how a lecturer's gender affects what people bring up in reviews
+    user: a university dean worried about gender bias on review sites
+    example_hypotheses:
+    - mentions the lecturer's physical attractiveness
+    - mentions the lecturer's use of humor
+    - mentions the lecturer's grading policy
+    v2-origid: 236
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    female_male:
+      pos_desc: rate female lecturers
+      neg_desc: rate male lecturers
+      pos_class:
+      - female
+      neg_class:
+      - male
+      example_hypotheses:
+      - expresses more disatisfaction
+      - comments on lecturing style
+      - complains of being annoyed
+      - claims that professor is unqualified
+  flip: true
+reddit_humor:
+- generation: whether the joke recieved a lot of upvotes
+  applications:
+  - target: the specific topics and setups that people find funny, so I can write
+      a funny joke
+    user: an aspiring comedian
+    example_hypotheses:
+    - pokes fun at an everyday situation
+    - touches on a taboo subject in a lighthearted manner
+    - uses self-deprecating humor
+    v2-origid: 237
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    funny_unfunny:
+      pos_desc: are funny Reddit jokes
+      neg_desc: are unfunny Reddit jokes
+      pos_class:
+      - funny
+      neg_class:
+      - unfunny
+      example_hypotheses:
+      - has a long buildup
+      - has a surprising punchline
+      - is not about race
+  flip: true
+reddit_stress:
+- generation: which Subreddit the post was submitted to
+  applications:
+  - target: the cause of different kinds of stress
+    user: training to become a psychiatrist
+    example_hypotheses:
+    - mentions financial problems, such as lack of money or difficulty affording medication
+    - mentions a fear of fainting or other physical reactions
+    - mentions difficulty in the college application process, such as not having enough
+      time for essays, not finishing college lists, or not having enough money for
+      tuition
+    v2-origid: 238
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    anxiety_stress:
+      pos_desc: are posts from a subreddit about anxiety
+      neg_desc: are posts from a subreddit about stress
+      pos_class:
+      - anxiety
+      neg_class:
+      - stress
+      example_hypotheses:
+      - talks about the future
+      - mentions social standing
+      - talks more about depression
+    ptsd_anxiety:
+      pos_desc: are posts from a subreddit about PTSD
+      neg_desc: are posts from a subreddit about anxiety
+      pos_class:
+      - ptsd
+      neg_class:
+      - anxiety
+      example_hypotheses:
+      - mentions military service
+      - mentions trauma
+      - talks about noises
+    abuse_social:
+      pos_desc: are posts from subreddits about abuse
+      neg_desc: are posts from subreddits about relationship problems
+      pos_class:
+      - abuse
+      neg_class:
+      - social
+    stress_financial:
+      pos_desc: are posts from subreddits about stress and anxiety generally
+      neg_desc: are posts from subreddits about financial problems
+      pos_class:
+      - anxiety
+      - stress
+      neg_class:
+      - financial
+  flip: true
+reuters_authorship:
+- generation: which Reuters journalist wrote the article
+  applications:
+  - target: the topics that each journalist covers
+    user: trying to figure out who wrote this anonymous news article
+    example_hypotheses:
+    - mentions the legal aspect of a situation, such as court cases or regulatory
+      issues
+    - discusses industry-wide changes, such as consolidation or joint ventures
+    - features quotes from CEOs or other figures in the industry
+    v2-origid: 244
+    purely_exploratory: false
+  - target: the specific writing style of each journalist
+    user: trying to figure out who wrote this anonymous news article
+    example_hypotheses:
+    - uses a formal and professional tone
+    - uses specific financial figures, such as '$5 billion'
+    - uses the phrase 'raising the stakes.'
+    v2-origid: 245
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    janlopatka_john_mastrini:
+      pos_desc: are news articles by Jan Lopatka
+      neg_desc: are news articles by John Mastrini
+      pos_class:
+      - JanLopatka
+      neg_class:
+      - JohnMastrini
+      example_hypotheses:
+      - talks more about politics
+      - talks less about the economy
+      - expresses more political views
+    lynneodonnel_sarahdavison:
+      pos_desc: are news articles by Lynne O'Donnel
+      neg_desc: are news articles by Sarah Davidson
+      pos_class:
+      - LynneO'Donnell
+      neg_class:
+      - SarahDavison
+      example_hypotheses:
+      - talks more about the economy
+      - uses fewer quotes
+      - expresses greater uncertainty
+    robinsidel_bernardhickey:
+      pos_desc: are news articles by Robin Sidel
+      neg_desc: are news articles by Bernard Hickey
+      pos_class:
+      - RobinSidel
+      neg_class:
+      - BernardHickey
+      example_hypotheses:
+      - uses more quotes
+      - contains longer sentences
+      - talks about the stock market
+  flip: true
+riddles:
+- generation: whether the words fit a secret rule
+  applications:
+  - target: something about the spelling of the words that explains the difference
+    user: trying to solve this riddle with my friends
+    example_hypotheses:
+    - has at least three syllables
+    - contains a letter that occurs more than once in the word
+    - contains words with a 'p' as the fourth letter
+    v2-origid: 247
+    purely_exploratory: false
+  pair_type: interpretability
+  pairs:
+    ggd:
+      pos_desc: are words that pass
+      neg_desc: are words that don't pass
+      pos_class:
+      - ggd_pos
+      neg_class:
+      - ggd_neg
+      example_hypotheses:
+      - rhymes with orange
+      - is a palindrome
+    t:
+      pos_desc: are words that pass
+      neg_desc: are words that don't pass
+      pos_class:
+      - t_pos
+      neg_class:
+      - t_neg
+      example_hypotheses:
+      - doesn't contains the letter S
+      - starts with P
+  flip: true
+scotus_cases:
+- generation: the relationship between the SCOTUS decision and the decision of the
+    lower court
+  applications:
+  - target: which policy topics cause the SCOTUS to disagree with lower courts
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - involve cases in which the plaintiff is from a minority group
+    - involve issues of federalism, such as the division of powers between state and
+      federal governments
+    - involve the interpretation of international treaties or agreements
+    v2-origid: 249
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    affirm_reverse:
+      pos_desc: are facts from Supreme Court cases where a lower court's ruling was
+        reversed
+      neg_desc: are facts from Supreme Court cases where a lower court's ruling was
+        affirmed
+      pos_class:
+      - dispo_reversed
+      neg_class:
+      - dispo_affirmed
+      example_hypotheses:
+      - is about jurisdiction
+      - mentions civil rights
+    vacated_reverse:
+      pos_desc: are facts from Supreme Court cases where a lower court's ruling was
+        vacated
+      neg_desc: are facts from Supreme Court cases where a lower court's ruling was
+        reversed
+      pos_class:
+      - dispo_vacated_remanded
+      neg_class:
+      - dispo_reversed
+      example_hypotheses:
+      - is about a civil suit
+      - is less strong in wording
+  flip: true
+- generation: who was president when the case was heard
+  applications:
+  - target: which policy topics were brought up before the court during each presidency
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - involves tort claims, such as the Torture Victim Protection Act
+    - concerns patent law or intellectual property
+    - talks about civil rights issues, such as discrimination
+    v2-origid: 250
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    obama_trump:
+      pos_desc: are facts from Supreme Court cases during the Obama presidency
+      neg_desc: are facts from Supreme Court cases during the Trump presidency
+      pos_class:
+      - era_pres_obama
+      neg_class:
+      - era_pres_trump
+      example_hypotheses:
+      - addresses issues about economic activity
+      - mentions criminal disputes
+      - is about LGBT issues
+  flip: true
+- generation: who was Chief Justice at the time of the case
+  applications:
+  - target: which policy areas were brought up before the court under each Chief Justice
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - involve civil rights, such as those of disabled individuals
+    - involves First Amendment rights
+    - involves the right to a fair trial
+    v2-origid: 251
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    burger_rehnquist:
+      pos_desc: are facts from cases heard by the Rehnquist court
+      neg_desc: are facts from cases heard by the Roberts court
+      pos_class:
+      - era_chief_rehnquist
+      neg_class:
+      - era_chief_roberts
+      example_hypotheses:
+      - addresses traditionally conservative topics
+      - mentions civil rights
+    criminal_rehnquist_roberts:
+      pos_desc: are facts from criminal Supreme Court cases heard by the Roberts court
+      neg_desc: are facts from criminal Supreme Court cases heard by the Rehnquist
+        court
+      pos_class:
+      - issue_criminal_era_chief_roberts
+      neg_class:
+      - issue_criminal_era_chief_rehnquist
+      example_hypotheses:
+      - mentions the death penalty
+      - talks about due process
+    economic_rehnquist_roberts:
+      pos_desc: are facts from civil rights Supreme Court cases heard by the Warren
+        court
+      neg_desc: are facts from civil rights Supreme Court cases heard by the Burger
+        court
+      pos_class:
+      - issue_civil_era_chief_warren
+      neg_class:
+      - issue_civil_era_chief_burger
+      example_hypotheses:
+      - talks about blatant discrimination
+      - does not mention the Civil Rights Act
+    warren_burger:
+      pos_desc: are facts from cases heard by the Warren court
+      neg_desc: are facts from cases heard by the Burger court
+      pos_class:
+      - era_chief_warren
+      neg_class:
+      - era_chief_burger
+      example_hypotheses:
+      - is about a civil rights violation
+      - mentions racism
+  flip: true
+- generation: who won the case
+  applications:
+  - target: the types of complains that the first party is more likely to win
+    user: a lawyer preparing a case in front of the Supreme Court
+    example_hypotheses:
+    - describe a voluntary action taken by the first party, such as a petition or
+      a settlement agreement
+    - talks about constitutional rights, such as the Fourth Amendment
+    - has evidence of a deliberate attempt to violate a law or regulation
+    v2-origid: 255
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    first_party_win:
+      pos_desc: are facts from Supreme Court cases where the first party won
+      neg_desc: are facts from Supreme Court cases where the first party lost
+      pos_class:
+      - first_party_win
+      neg_class:
+      - first_party_lose
+      example_hypotheses:
+      - describes a violation of civil rights
+      - mentions state law
+  flip: true
+- generation: whether the justices agreed with one another
+  applications:
+  - target: which policy areas the justices can reach consensus on
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - involves a defendant who was accused of violating an obscenity law
+    - involve a challenge under the Fourth Amendment
+    - attempts to balance individual rights and the interests of the state
+    v2-origid: 256
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    plurality:
+      pos_desc: are facts from Supreme Court cases with only a plurality (no majority)
+        decision
+      neg_desc: are facts from Supreme Court cases with a majority decision
+      pos_class:
+      - decision_plurality
+      neg_class:
+      - decision_majority
+      example_hypotheses:
+      - describes a partisan topic
+      - talks about guns
+      - talks about religious liberties
+    unanimous:
+      pos_desc: are facts from Supreme Court cases with a unanimous decision
+      neg_desc: are facts from Supreme Court cases with only a majority decision
+      pos_class:
+      - decision_per_curiam
+      neg_class:
+      - decision_majority
+      example_hypotheses:
+      - is not about a partisan issue
+      - describes egregious rights violations
+  flip: true
+- generation: who the parties are
+  applications:
+  - target: which general policy areas come up
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - involves a dispute over the selection of a jury
+    - involves a dispute over the protection of civil rights
+    - involves the use of surveillance evidence
+    v2-origid: 258
+    purely_exploratory: false
+  - target: which specific laws and regulations are litigated
+    user: a political scientist studying Supreme Court rulings
+    example_hypotheses:
+    - discusses the application of the 14th Amendment
+    - involves the application of the Equal Protection Clause
+    - involve cases that involve the interpretation of the Low-Level Radioactive Waste
+      Management Act Amendments
+    v2-origid: 2258
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    state_first_second:
+      pos_desc: are facts from Supreme Court cases involving an American state as
+        the plaintiff
+      neg_desc: are facts from Supreme Court cases involving an American state as
+        the defendant
+      pos_class:
+      - party_1st_state
+      neg_class:
+      - party_2nd_state
+      example_hypotheses:
+      - describes state crimes
+      - is about inter-state conflict
+    state_or_not:
+      pos_desc: are facts from Supreme Court cases involving an American state as
+        a party
+      neg_desc: are facts from Supreme Court cases without an American state as a
+        party
+      pos_class:
+      - party_1st_state
+      - party_2nd_state
+      neg_class:
+      - party_neither_state
+      example_hypotheses:
+      - describes challenges to state policies
+      - mentions a state law
+    us_first_second:
+      pos_desc: are facts from Supreme Court cases involving the United States as
+        the plaintiff
+      neg_desc: are facts from Supreme Court cases involving the United States as
+        the defendant
+      pos_class:
+      - party_1st_us
+      neg_class:
+      - party_2nd_us
+      example_hypotheses:
+      - describes federal crimes
+      - mentions murder
+    us_or_not:
+      pos_desc: are facts from Supreme Court cases involving the United States as
+        a party
+      neg_desc: are facts from Supreme Court cases without the United States as a
+        party
+      pos_class:
+      - party_1st_us
+      - party_2nd_us
+      neg_class:
+      - party_neither_us
+      example_hypotheses:
+      - describes nationally relevant topics
+      - is about a felony
+  flip: true
+short_answer_scoring:
+- generation: how good the score was
+  applications:
+  - target: the specific writing style of good writers, so that I can improve my own
+      writing
+    user: a student who has to write several responses toshort answer questions
+    example_hypotheses:
+    - makes use of active verbs and phrases
+    - uses more precise vocabulary
+    - uses facts and examples to back up statements
+    v2-origid: 262
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    good_bad:
+      pos_desc: are good short answers
+      neg_desc: are bad short answers
+      pos_class:
+      - good_answers
+      neg_class:
+      - bad_answers
+      example_hypotheses:
+      - uses correct grammar
+      - gives more detail
+      - uses longer words
+    good_medium:
+      pos_desc: are good short answers
+      neg_desc: are average short answers
+      pos_class:
+      - good_answers
+      neg_class:
+      - medium_answers
+      example_hypotheses:
+      - gives more examples
+      - writes in complete sentences
+      - has good grammar
+  flip: false
+stock_news:
+- generation: the state of the stock market on the day of the headline
+  applications:
+  - target: what specific news events cause a stock market rally
+    user: a quantitative trader trying to beat the market
+    example_hypotheses:
+    - highlights a major technological breakthrough
+    - references a successful military operation
+    - references celebrations or anniversaries
+    v2-origid: 264
+    purely_exploratory: false
+  pair_type: socioeconomic
+  pairs:
+    up_down:
+      pos_desc: are headlines on days the stock market rises
+      neg_desc: are headlines on days the stock market falls
+      pos_class:
+      - up
+      neg_class:
+      - down
+      example_hypotheses:
+      - talks about a bill being passed
+      - talks about economic growth
+      - mention a war ending
+  flip: true
+suicide_notes:
+- generation: the suicidal intent of the author
+  applications:
+  - target: the specific topics or tones brought up by people who actually plan to
+      commit suicide
+    user: a psychiatrist hoping to better help my patients
+    example_hypotheses:
+    - mentions taking medication, or going to therapy/counseling
+    - mentions feeling ashamed or embarrassed
+    - mentions a lack of support system
+    v2-origid: 265
+    purely_exploratory: false
+  pair_type: intent
+  pairs:
+    suicide_depression:
+      pos_desc: are notes from people who are suicidal
+      neg_desc: are notes from people who are depressed, but not suicidal
+      pos_class:
+      - suicide
+      neg_class:
+      - depression
+      example_hypotheses:
+      - is more apologetic
+      - mentions family and friends
+      - is more thorough
+      - uses better grammar
+  flip: true
+times_india_headlines:
+- generation: the year the headline was written
+  applications:
+  - target: which topics dominated the news from year to year
+    user: an Indian historian writing about recent trends
+    example_hypotheses:
+    - mentions the economic effects of deficient rain
+    - mentions the possible formation of an alliance in Uttar Pradesh
+    - mentions crimes, such as robberies and murders
+    v2-origid: 268
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    '2003_2004':
+      pos_desc: are Indian news headlines from 2003
+      neg_desc: are Indian news headlines from 2004
+      pos_class:
+      - '2003'
+      neg_class:
+      - '2004'
+      example_hypotheses:
+      - talks more about iraq
+      - mentions train crashes
+      - talks about Nadimarg massacre
+    '2007_2008':
+      pos_desc: are Indian news headlines from 2007
+      neg_desc: are Indian news headlines from 2008
+      pos_class:
+      - '2007'
+      neg_class:
+      - '2008'
+      example_hypotheses:
+      - talks less about the economy
+      - is more optimistic
+    '2019_2020':
+      pos_desc: are Indian news headlines from 2019
+      neg_desc: are Indian news headlines from 2020
+      pos_class:
+      - '2019'
+      neg_class:
+      - '2020'
+      example_hypotheses:
+      - does not mention COVID-19
+      - is more optimistic
+  flip: true
+trial_deception:
+- generation: whether the testimony turned out to be deceptive
+  applications:
+  - target: the specific claims of innocent people
+    user: a judge concerned about false testimony
+    example_hypotheses:
+    - contains descriptions of events that are easy to understand and follow
+    - mentions trying to de-escalate a situation
+    - mentions being in a state of shock after the incident
+    v2-origid: 269
+    purely_exploratory: false
+  - target: the general tone of innocent people
+    user: a judge concerned about false testimony
+    example_hypotheses:
+    - includes statements of gratitude and appreciation for a particular person or
+      thing
+    - expresses appreciation for the support and kindness of others
+    - contains language of regret or remorse
+    v2-origid: 2269
+    purely_exploratory: false
+  pair_type: intent
+  pairs:
+    truth_lie:
+      pos_desc: are truthful testimony in criminal trials
+      neg_desc: are deceptive testimony in criminal trials
+      pos_class:
+      - truth
+      neg_class:
+      - lie
+      example_hypotheses:
+      - admits to not knowing
+      - does not claim innocence
+      - expresses more uncertainty
+      - is more apologetic
+  flip: true
+tweet_gender:
+- generation: whether the Twitter user is male or female
+  applications:
+  - target: the specific topics that each gender tends to talk about
+    user: a gender studies researcher
+    example_hypotheses:
+    - mentions or references to outdoor activities, such as camping, hiking, and fishing
+    - discusses technology and the internet
+    - references literature, such as quotes from books and poems
+    v2-origid: 270
+    purely_exploratory: false
+  - target: the speaking style of each gender
+    user: a gender studies researcher
+    example_hypotheses:
+    - uses technical jargon
+    - uses aggressive language
+    - uses more slang words
+    v2-origid: 271
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    male_female:
+      pos_desc: are Tweets from male users
+      neg_desc: are Tweets from female users
+      pos_class:
+      - male_tweets
+      neg_class:
+      - female_tweets
+      example_hypotheses:
+      - talks about sports
+      - talks about politics
+      - talks about celebrities
+  flip: true
+tweet_rumor:
+- generation: how long it's been since the rumor started
+  applications:
+  - target: the general tone of rumors as they evolve over time
+    user: a sociologist studying the patterns of rumors
+    example_hypotheses:
+    - uses language that is skeptical of the rumor
+    - is positive in tone and offers praise
+    - includes more disbelief and satire
+    v2-origid: 274
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    denzel_wash_early_late:
+      pos_desc: are early Twitter rumors about Denzel Washington praising Trump
+      neg_desc: are later Twitter rumors about Denzel Washington praising Trump
+      pos_class:
+      - denzel_washington_early
+      neg_class:
+      - denzel_washington_late
+      example_hypotheses:
+      - is less skeptical
+      - expresses more surprise
+    redhawks_early_late:
+      pos_desc: are early Twitter rumors about the Redhawks
+      neg_desc: are later Twitter rumors about the Redhawks
+      pos_class:
+      - redhawks_early
+      neg_class:
+      - redhawks_late
+      example_hypotheses:
+      - is less skeptical
+      - expresses more surprise
+    veggietales_early_late:
+      pos_desc: are early Twitter rumors about a Veggietales cannabis character
+      neg_desc: are later Twitter rumors about a Veggietales cannabis character
+      pos_class:
+      - veggietales_early
+      neg_class:
+      - veggietales_late
+      example_hypotheses:
+      - is less skeptical
+      - expresses more surprise
+    zucc_early_late:
+      pos_desc: are early Twitter rumors about Zuckerberg buying a yatch
+      neg_desc: are later Twitter rumors about Zuckerberg buying a yatch
+      pos_class:
+      - zuckerberg_yatch_early
+      neg_class:
+      - zuckerberg_yatch_late
+      example_hypotheses:
+      - is less skeptical
+      - expresses more surprise
+  flip: true
+twitter_bots:
+- generation: the type of user posting the Tweet
+  applications:
+  - target: the specific topics discussed by different kinds of users, so I can detect
+      bots
+    user: an engineer at a social media company building a spam detector
+    example_hypotheses:
+    - mentions celebrities or famous people
+    - contains references to sports and athletes
+    - contains references to current events or news stories
+    v2-origid: 277
+    purely_exploratory: false
+  pair_type: demographic
+  pairs:
+    human:
+      pos_desc: were Tweeted by bots
+      neg_desc: were Tweeted by humans
+      pos_class:
+      - trad_bot
+      neg_class:
+      - human
+      example_hypotheses:
+      - talks about sexual topics
+      - discusses politics
+    trad_social:
+      pos_desc: were Tweeted by bots that pretend to be people
+      neg_desc: were Tweeted by weaker bots
+      pos_class:
+      - social_bot
+      neg_class:
+      - trad_bot
+      example_hypotheses:
+      - talks about other people
+  flip: true
+twitter_misspellings:
+- generation: whether the Tweet has a misspelling
+  applications:
+  - target: the social context in which people are more likely to use a misspelled
+      word
+    user: a linguist studying English vernacular
+    example_hypotheses:
+    - refers to the other person as a friend
+    - is talking to a family member
+    - mentions people in a casual manner, such as calling someone 'hun' or 'missy'
+    v2-origid: 281
+    purely_exploratory: false
+  pair_type: grammar
+  pairs:
+    going_goin:
+      pos_desc: misspell "going"
+      neg_desc: don't misspell "going"
+      pos_class:
+      - going_misspell
+      neg_class:
+      - going_proper
+      example_hypotheses:
+      - is part of a conversation
+      - is part of an argument
+    that_dat:
+      pos_desc: misspell "that"
+      neg_desc: don't misspell "that"
+      pos_class:
+      - that_misspell
+      neg_class:
+      - that_proper
+      example_hypotheses:
+      - is part of a conversation
+      - is more friendly
+    with_wit:
+      pos_desc: misspell "with"
+      neg_desc: don't misspell "with"
+      pos_class:
+      - with_misspell
+      neg_class:
+      - with_proper
+      example_hypotheses:
+      - is part of a conversation
+      - is more friendly
+    your_ur:
+      pos_desc: misspell "your"
+      neg_desc: don't misspell "your"
+      pos_class:
+      - your_misspell
+      neg_class:
+      - your_proper
+      example_hypotheses:
+      - is part of a conversation
+      - is more friendly
+  flip: true
+un_debates:
+- generation: the year the speech was given
+  applications:
+  - target: the specific policy priorities and stances of countries over time
+    user: a political scientist studying historical trends
+    example_hypotheses:
+    - discusses the need for a two-state solution between Israel and Palestine
+    - discusses the importance of holding China accountable
+    - mentions the importance of strong families and faith
+    v2-origid: 287
+    purely_exploratory: false
+  pair_type: time
+  pairs:
+    russia_2k_08_12:
+      pos_desc: are speeches from Russia between 2008 and 2012
+      neg_desc: are speeches from Russia between 2000 and 2008
+      pos_class:
+      - russia_08_12
+      neg_class:
+      - russia_2k_08
+      example_hypotheses:
+      - is more friendly towards the West
+      - describes economic problems
+    russia_08_12_post:
+      pos_desc: are speeches from Russia between 2008 and 2012
+      neg_desc: are speeches from Russia after 2012
+      pos_class:
+      - russia_08_12
+      neg_class:
+      - russia_post_12
+      example_hypotheses:
+      - is more friendly towards the West
+      - mentions military disputes
+    china_2k_13_16:
+      pos_desc: are speeches from China between 2000 and 2013
+      neg_desc: are speeches from China between 2013 and 2016
+      pos_class:
+      - china_2k_13
+      neg_class:
+      - china_13_16
+      example_hypotheses:
+      - is more friendly towards the West
+      - describes economic issues
+    china_13_16_post:
+      pos_desc: are speeches from China between 2013 and 2016
+      neg_desc: are speeches from China after 2016
+      pos_class:
+      - china_13_16
+      neg_class:
+      - china_post_16
+      example_hypotheses:
+      - is more friendly towards the West
+      - does not mention the military
+    us_bush_obama:
+      pos_desc: are speeches from the United States between 2001 and 2008
+      neg_desc: are speeches from the United States between 2009 and 2016
+      pos_class:
+      - us_bush
+      neg_class:
+      - us_obama
+      example_hypotheses:
+      - talks more about Iraq
+      - mentions counterterrorism
+      - talks about 9/11
+    us_obama_trump:
+      pos_desc: are speeches from the United States between 2009 and 2016
+      neg_desc: are speeches from the United States after 2017
+      pos_class:
+      - us_obama
+      neg_class:
+      - us_trump
+      example_hypotheses:
+      - are more friendly
+      - mentions collaboration
+  flip: true
+- generation: the country giving the speech
+  applications:
+  - target: the specific policy priorities and stances of each country
+    user: a political scientist studying comparative government
+    example_hypotheses:
+    - calls for the enforcement of compliance by states known to sponsor terrorism
+    - suggests steps to enable developing countries to coordinate their development
+      efforts
+    - mentions measures to address climate change based on mitigation and adaptation
+      strategies
+    v2-origid: 298
+    purely_exploratory: false
+  pair_type: authorship
+  pairs:
+    israel_arab_80s:
+      pos_desc: are speeches from Israel in the 80s
+      neg_desc: are speeches from members of the Arab League in the 80s
+      pos_class:
+      - israel_80s
+      neg_class:
+      - pales_80s
+      - jordan_80s
+      - lebanon_80s
+      - iraq_80s
+      - syria_80s
+      - sudan_80s
+      example_hypotheses:
+      - mentions Israel
+      - talks about sovereignty
+    israel_arab_90s:
+      pos_desc: are speeches from Israel in the 90s
+      neg_desc: are speeches from members of the Arab League in the 90s
+      pos_class:
+      - israel_90s
+      neg_class:
+      - pales_90s
+      - jordan_90s
+      - lebanon_90s
+      - iraq_90s
+      - syria_90s
+      - sudan_90s
+      example_hypotheses:
+      - supportive of Israel
+      - talks about sovereignty
+      - mentions anti-semitism
+    israel_arab_2ks:
+      pos_desc: are speeches from Israel from 2000-2009
+      neg_desc: are speeches from members of the Arab League from 2000-2009
+      pos_class:
+      - israel_2ks
+      neg_class:
+      - pales_2ks
+      - jordan_2ks
+      - lebanon_2ks
+      - iraq_2ks
+      - syria_2ks
+      - sudan_2ks
+      example_hypotheses:
+      - does not mention nuclear weapons
+      - mentions anti-semitism
+    israel_arab_10s:
+      pos_desc: are speeches from Israel in the 2010s
+      neg_desc: are speeches from members of the Arab League in the 2010s
+      pos_class:
+      - israel_10s
+      neg_class:
+      - pales_10s
+      - jordan_10s
+      - lebanon_10s
+      - iraq_10s
+      - syria_10s
+      - sudan_10s
+      example_hypotheses:
+      - supportive of Israel
+      - mentions anti-semitism
+    israel_gulf_80s:
+      pos_desc: are speeches from Israel in the 80s
+      neg_desc: are speeches from members of the Gulf Cooperation Council in the 80s
+      pos_class:
+      - israel_80s
+      neg_class:
+      - bahrain_80s
+      - kuwait_80s
+      - oman_80s
+      - qatar_80s
+      - saudi_80s
+      - uae_80s
+      example_hypotheses:
+      - mentions Israel
+      - mentions anti-semitism
+    israel_gulf_90s:
+      pos_desc: are speeches from Israel in the 90s
+      neg_desc: are speeches from members of the Gulf Cooperation Council in the 90s
+      pos_class:
+      - israel_90s
+      neg_class:
+      - bahrain_90s
+      - kuwait_90s
+      - oman_90s
+      - qatar_90s
+      - saudi_90s
+      - uae_90s
+      example_hypotheses:
+      - supportive of Israel
+      - mentions anti-semitism
+    israel_gulf_2ks:
+      pos_desc: are speeches from Israel from 2000-2009
+      neg_desc: are speeches from members of the Gulf Cooperation Council from 2000-2009
+      pos_class:
+      - israel_2ks
+      neg_class:
+      - bahrain_2ks
+      - kuwait_2ks
+      - oman_2ks
+      - qatar_2ks
+      - saudi_2ks
+      - uae_2ks
+      example_hypotheses:
+      - does not mention nuclear weapons
+      - mentions anti-semitism
+    israel_gulf_10s:
+      pos_desc: are speeches from Israel in the 2010s
+      neg_desc: are speeches from members of the Gulf Cooperation Council in the 2010s
+      pos_class:
+      - israel_10s
+      neg_class:
+      - bahrain_10s
+      - kuwait_10s
+      - oman_10s
+      - qatar_10s
+      - saudi_10s
+      - uae_10s
+      example_hypotheses:
+      - talks about Palestine
+      - talks about attacks
+    indopak_80s:
+      pos_desc: are speeches from India in the 80s
+      neg_desc: are speeches from Pakistan in the 80s
+      pos_class:
+      - india_80s
+      neg_class:
+      - pak_80s
+      example_hypotheses:
+      - is hostile towards Pakistan
+      - mentions military disputes
+    indopak_90s:
+      pos_desc: are speeches from India in the 90s
+      neg_desc: are speeches from Pakistan in the 90s
+      pos_class:
+      - india_90s
+      neg_class:
+      - pak_90s
+      example_hypotheses:
+      - talks about border conflicts
+      - talks about Muslims
+    indopak_2ks:
+      pos_desc: are speeches from India from 2000-2009
+      neg_desc: are speeches from Pakistan from 2000-2009
+      pos_class:
+      - india_2ks
+      neg_class:
+      - pak_2ks
+      example_hypotheses:
+      - mentions economic issues
+      - talks about China
+    indopak_10s:
+      pos_desc: are speeches from India in the 2010s
+      neg_desc: are speeches from Pakistan in the 2010s
+      pos_class:
+      - india_10s
+      neg_class:
+      - pak_10s
+      example_hypotheses:
+      - is friendly towards the West
+      - mentions democracy
+    korea_japan_90s:
+      pos_desc: are speeches from Korea in the 90s
+      neg_desc: are speeches from Japan in the 90s
+      pos_class:
+      - korea_90s
+      neg_class:
+      - japan_90s
+      example_hypotheses:
+      - is hostile towards Japan
+      - mentions economic issues
+    korea_japan_2ks:
+      pos_desc: are speeches from Korea from 2000-2009
+      neg_desc: are speeches from Japan from 2000-2009
+      pos_class:
+      - korea_2ks
+      neg_class:
+      - japan_2ks
+      example_hypotheses:
+      - mentions the technology sector
+      - mentions North Korea
+    korea_japan_10s:
+      pos_desc: are speeches from Korea in the 2010s
+      neg_desc: are speeches from Japan in the 2010s
+      pos_class:
+      - korea_10s
+      neg_class:
+      - japan_10s
+      example_hypotheses:
+      - mentions China
+      - mentions North Korea
+  flip: true
+unhealthy_conversations:
+- generation: the type of unhealthy tone as annotated by experts
+  applications:
+  - target: what specific topics and actions define each tone
+    user: a couples therapist learning about different unhealthy conversation styles
+    example_hypotheses:
+    - refers to other people as 'twerps' or 'idiots'
+    - refers to other people as 'stupid' or 'horrible'
+    - mentions intervening in a situation
+    v2-origid: 305
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    dismissive_condescending:
+      pos_desc: are online messages that are dismissive
+      neg_desc: are online messages that are condescending
+      pos_class:
+      - dismissive
+      neg_class:
+      - condescending
+      example_hypotheses:
+      - is not insulting
+      - does not elaborate
+    generalisation_unfair:
+      pos_desc: are online messages that generalize
+      neg_desc: are online messages that generalize unfairly
+      pos_class:
+      - generalisation
+      neg_class:
+      - generalisation_unfair
+      example_hypotheses:
+      - is more objective
+      - provides more reasoning
+    hostile_antagonize:
+      pos_desc: are online messages that are hostile
+      neg_desc: are online messages that are antagonizing
+      pos_class:
+      - hostile
+      neg_class:
+      - antagonize
+      example_hypotheses:
+      - is less insulting
+      - uses more curse words
+  flip: true
+urban_dictionary:
+- generation: how many upvotes or downvotes the definition received
+  applications:
+  - target: what types of proposed definitions people like
+    user: a user of the site hoping to write popular definitions
+    example_hypotheses:
+    - uses slang terms
+    - mentions celebrities or popular figures
+    - presents an aspirational or upbeat message
+    v2-origid: 308
+    purely_exploratory: false
+  pair_type: judgement
+  pairs:
+    top1_down:
+      pos_desc: are Urban Dictionary definitions in the top 1% of downvotes
+      neg_desc: are average Urban Dictionary definitions
+      pos_class:
+      - top_1_down
+      neg_class:
+      - control
+      example_hypotheses:
+      - is racist
+      - is sexist
+      - is incoherent
+      - is not funny
+    top1_top5_down:
+      pos_desc: are Urban Dictionary definitions in the top 5% of upvotes
+      neg_desc: are Urban Dictionary definitions in the top 10% of upvotes
+      pos_class:
+      - top_1_down
+      - top_5_down
+      neg_class:
+      - top_10_down
+      example_hypotheses:
+      - is more controversial
+    top1_top5_up:
+      pos_desc: are Urban Dictionary definitions in the top 1% of upvotes
+      neg_desc: are Urban Dictionary definitions in the top 5% of upvotes
+      pos_class:
+      - top_1_up
+      neg_class:
+      - top_5_up
+      example_hypotheses:
+      - is about a very common word
+    top1_up:
+      pos_desc: are Urban Dictionary definitions in the top 1% of upvotes
+      neg_desc: are average Urban Dictionary definitions
+      pos_class:
+      - top_1_up
+      neg_class:
+      - control
+      example_hypotheses:
+      - includes a joke
+      - describes a common word
+    top5_top10_up:
+      pos_desc: are Urban Dictionary definitions in the top 5% of upvotes
+      neg_desc: are Urban Dictionary definitions in the top 10% of upvotes
+      pos_class:
+      - top_1_up
+      - top_5_up
+      neg_class:
+      - top_10_up
+      example_hypotheses:
+      - is about a very common word
+      - provides a short definition
+  flip: true
+yc_startups:
+- generation: where the startup was founded
+  applications:
+  - target: how location influences the service or product offered
+    user: an aspiring entreprenuer deciding whether to move to the bay
+    example_hypotheses:
+    - references the use of software or applications
+    - aims to reduce time and/or cost of a process
+    - uses data analytics to inform decisions
+    v2-origid: 311
+    purely_exploratory: false
+  pair_type: location
+  pairs:
+    bay_area:
+      pos_desc: are Y Combinator startup descriptions from the United States
+      neg_desc: are Y Combinator startup descriptions outside the United States
+      pos_class:
+      - location_usa
+      neg_class:
+      - location_not_usa
+      example_hypotheses:
+      - describes a business-to-business company
+      - talks about machine learning
+  flip: true
+- generation: the operation status of the startup
+  applications:
+  - target: what services or products are more likely to succeed
+    user: a venture capital firm deciding which startups to fund
+    example_hypotheses:
+    - offers a cloud-based service
+    - enables users to manage or track tasks online
+    - enables users to access cutting edge DNA sequencing technology
+    v2-origid: 313
+    purely_exploratory: false
+  pair_type: subject
+  pairs:
+    dead_operating:
+      pos_desc: are Y Combinator startup descriptions that are inactive
+      neg_desc: are Y Combinator startup descriptions that are still active
+      pos_class:
+      - status_inactive
+      neg_class:
+      - status_active
+      example_hypotheses:
+      - is part of an existing product
+      - mentions consumer goods
+    exited_operating:
+      pos_desc: are Y Combinator startup descriptions that have exited through acquisition or IPO
+      neg_desc: are Y Combinator startup descriptions that are still operating
+      pos_class:
+      - status_acquired
+      - status_public
+      neg_class:
+      - status_active
+      example_hypotheses:
+      - is a piece of technology
+      - mentions machine learning
+      - is about databases
+  flip: true
+- generation: when the startup was founded
+  applications:
+  - target: which products and services are most exciting today
+    user: a venture capital firm studying trends in the industry
+    example_hypotheses:
+    - involves gesture control technology
+    - mentions synthetic biology
+    - mention artificial intelligence or machine learning
+    v2-origid: 314
+    purely_exploratory: false
+  pair_type: time
+  flip: true
+  pairs:
+    years_0609_1013:
+      pos_desc: are Y Combinator startup descriptions between 2006 and 2009
+      neg_desc: are Y Combinator startup descriptions between 2010 and 2013
+      pos_class:
+      - year_06
+      - year_07
+      - year_08
+      - year_09
+      neg_class:
+      - year_10
+      - year_11
+      - year_12
+      - year_13
+      example_hypotheses:
+      - talks about the internet
+      - does not mention machine learning
+    years_1013_1417:
+      pos_desc: are Y Combinator startup descriptions between 2010 and 2013
+      neg_desc: are Y Combinator startup descriptions between 2014 and 2017
+      pos_class:
+      - year_10
+      - year_11
+      - year_12
+      - year_13
+      neg_class:
+      - year_14
+      - year_15
+      - year_16
+      - year_17
+      example_hypotheses:
+      - talks about the internet
+      - does not mention machine learning
+    years_1417_1822:
+      pos_desc: are Y Combinator startup descriptions between 2014 and 2017
+      neg_desc: are Y Combinator startup descriptions between 2018 and 2022
+      pos_class:
+      - year_14
+      - year_15
+      - year_16
+      - year_17
+      neg_class:
+      - year_18
+      - year_19
+      - year_20
+      - year_21
+      - year_22
+      example_hypotheses:
+      - talks about the internet
+      - does not mention machine learning
+  flip: true
+- generation: the identity of the founder
+  applications:
+  - target: how founder diversity affects the product or service offered
+    user: a venture capital firm studying trends in the industry
+    example_hypotheses:
+    - provides services for underprivleged groups
+    - incorporates a community element in the product
+    - is not driven by profit motive 
+    v2-origid: 316
+    purely_exploratory: false
+  pair_type: demographic
+  flip: true
+  pairs:
+    highlight_black:
+      pos_desc: are Y Combinator startups with black founders
+      neg_desc: are Y Combinator startups with nonblack founders
+      pos_class:
+      - highlight_black_yes
+      neg_class:
+      - highlight_black_no
+    highlight_latinx:
+      pos_desc: are Y Combinator startups with Latinx founders
+      neg_desc: are Y Combinator startups with non-Latinx founders
+      pos_class:
+      - highlight_latinx_yes
+      neg_class:
+      - highlight_latinx_no
+    highlight_women:
+      pos_desc: are Y Combinator startups with female founders
+      neg_desc: are Y Combinator startups with male founders
+      pos_class:
+      - highlight_women_yes
+      neg_class:
+      - highlight_women_no

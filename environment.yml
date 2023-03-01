@@ -1,0 +1,18 @@
+name: opend5
+channels:
+  - defaults
+dependencies:
+  - tqdm
+  - nltk
+  - pandas
+  - pyyaml
+  - pytorch
+  - transformers
+  - numpy
+  - python
+  - markdown
+  - scikit-learn
+  - gdown
+  - tweepy
+  - pdfplumber
+  - gzip

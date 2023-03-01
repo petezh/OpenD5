@@ -1,0 +1,643 @@
+abc_headlines:
+  description: headlines published by ABC news, an American news company
+  discipline: social science
+  expertise: none
+  preprocessing: ABC headlines are directly downloaded from Harvard Dataverse. The
+    year is extracted from the publication date field. Samples are constructed from
+    the headline text.
+  status: public
+  url: https://www.kaggle.com/therohk/million-headlines/data
+ad_transcripts:
+  description: ad scripts from a variety of industries
+  discipline: business
+  expertise: none
+  preprocessing: Ad transcripts are directly downloaded from Kaggle. The top eight
+    industries by frequency are selected. Newlines are replaced with spaces.
+  status: public
+  url: https://www.kaggle.com/datasets/kevinhartman0/advertisement-transcripts-from-various-industries
+admin_statements:
+  description: statements of administration policy from American presidents
+  discipline: social science
+  expertise: familiarity with American policy
+  preprocessing: Administration statements are extracted from a collection hosted
+    on GitHub. Extraneous symbols are removed and samples are split by paragraph.
+  status: public
+  url: https://github.com/unitedstates/statements-of-administration-policy
+ai2_natural_instruction:
+  description: a learning-from-instructions dataset released by the Allen Institute
+    for AI
+  discipline: machine learning
+  expertise: none
+  preprocessing: Natural instruction tasks are directly downloaded without modification.
+  status: public
+  url: https://instructions.apps.allenai.org/
+airline_reviews:
+  description: reviews of airlines collected from the review website Skytrax
+  discipline: social science
+  expertise: none
+  preprocessing: Airline reviews for airlines, airports, and seats are downloaded
+    from a public Github repository. Names of aircrafts, airlines, countries, and
+    traveler types are standardized. Ratings of 1, 4, or 5 on a scale of 5, and 1,
+    5, 8, or 10 on a scale of 10 are kept.
+  status: public
+  url: https://github.com/quankiquanki/skytrax-reviews-dataset
+aita:
+  description: posts on the "Am I The Asshole" Subreddit, an online forum people ask
+    others whether they were in the wrong
+  discipline: social science
+  expertise: none
+  preprocessing: Posts from r/AmITheAsshole are downloaded from a praw scrape of Reddit.
+    Topic areas are chosen based on common themes in posts and coarsely defined based
+    on manual keywords. Each post can belong to multiple topic areas.
+  status: public
+  url: https://github.com/iterative/aita_dataset
+all_the_news:
+  description: news articles collected from various outlets between 2015 and 2017
+  discipline: social science
+  expertise: none
+  preprocessing: News articles are downloaded directly from Components website. The
+    titles are used as text samples.
+  status: public
+  url: https://www.kaggle.com/datasets/snapcrack/all-the-news
+amazon_reviews:
+  description: Amazon reviews collected from various product categories
+  discipline: business
+  expertise: none
+  preprocessing: Amazon reviews are downloaded from a 2018 crawl of the website. The
+    first 100,000 review texts are treated as the text sample.
+  status: public
+  url: https://nijianmo.github.io/amazon/index.html
+armenian_jobs:
+  description: job postings in Armenia
+  discipline: business
+  expertise: none
+  preprocessing: Armenian job postings dataset is downloaded from a snapshot on GitHub.
+    Different IT jobs are manually coded and time intervals are defined in order to
+    balance sample availability.
+  status: public
+  url: https://www.kaggle.com/datasets/udacity/armenian-online-job-postings
+blm_countermovements:
+  description: Tweets about the All Lives Matter, Blue Lives Matter, and White Lives
+    Matter movements
+  discipline: humanities
+  expertise: Familiarity with the BLM movement
+  preprocessing: Tweet IDs are downloaded from the original paper and, where available,
+    collected from the current API. Due to API rate limits, only 1,000 Tweets are
+    sampled from each movement.
+  status: public
+  url: https://databank.illinois.edu/datasets/IDB-9614170
+blogs:
+  description: blog posts scraped from blogger.com in August of 2014
+  discipline: social science
+  expertise: none
+  preprocessing: Blogs are downloaded directly from Kaggle, and the first 1 million
+    blog posts are kept.
+  status: public
+  url: https://www.kaggle.com/datasets/rtatman/blog-authorship-corpus
+boolq:
+  description: a reading comprehension dataset of yes/no questions
+  discipline: machine learning
+  expertise: none
+  preprocessing: Boolean questions are downloaded directly as is.
+  status: public
+  url: https://github.com/google-research-datasets/boolean-questions
+cah:
+  description: cards from games of Cards Against Humanity, an adult party game
+  discipline: humanities
+  expertise: none
+  preprocessing: Cards Against Humanities plays are retrieved from direct correspondence
+    with authors and accessed locally.
+  status: private
+  url: https://paperswithcode.com/dataset/cards-against-humanity
+clickbait_headlines:
+  description: headlines across time from the Examiner, a clickbait news site
+  discipline: social science
+  expertise: none
+  preprocessing: The Examiner headlines are directly downloaded from Kaggle. The year
+    is extracted from the publication date field. Samples are constructed from the
+    headline text.
+  status: public
+  url: https://www.kaggle.com/datasets/therohk/examine-the-examiner
+convincing_arguments:
+  description: arguments on a variety of topics annotated for convincingness
+  discipline: humanities
+  expertise: Understanding of debate topics
+  preprocessing: Annotated arguments are downloaded from the GitHub repository. Arguments
+    are sorted by rank. The bottom 400 are treated as "unconvincing", the top 200
+    are treated as "convincing", and the next 200 are treated as "somewhat convincing."
+  status: public
+  url: https://github.com/UKPLab/acl2016-convincing-arguments
+craigslist_negotiations:
+  description: dialogue from Craigslist negotiations, an online seller platform
+  discipline: humanities
+  expertise: none
+  preprocessing: Craigslist negotiations are downloaded from Huggingface. Sequences
+    which contained a "quit" intention or "reject" intention are categorized as failures;
+    those which contained an "accept" intention are categorized as successes. The
+    mid-price is defined as the mean price of the items sold. Within each category,
+    the items are sorted by mid-price. The top half is treated as high-price and the
+    bottom half is treated as low-price.
+  status: public
+  url: https://huggingface.co/datasets/craigslist_bargains
+debate:
+  description: evidence compiled for American competitive policy debate, published
+    online by debate camps
+  discipline: humanities
+  expertise: Debate knowledge
+  preprocessing: The train split is downloaded from Huggingface. For each sample,
+    we use the abstract as the text. Arguments are categorized by type, debate camp
+    of origin, and topic/specific argument. For topics, we use domain knowledge to
+    list relevant keywords for each topic and include any sample with a file name
+    that includes any keyword. A single sample can belong to multiple topics.
+  status: public
+  url: https://huggingface.co/datasets/Hellisotherpeople/DebateSum
+dice_jobs:
+  description: American technology job postings on dice.com
+  discipline: business
+  expertise: none
+  preprocessing: Job postings are downloaded from Kaggle. Posts from the six most
+    popular companies are categorized by company. We remove miscellaneous characters
+    and blank descriptions. We additionally apply our splitting procedure to reduce
+    description length.
+  status: public
+  url: https://www.kaggle.com/datasets/PromptCloudHQ/us-technology-jobs-on-dicecom
+diplomacy_deception:
+  description: diaglogue from games of Diplomacy, which involves deception
+  discipline: social science
+  expertise: Familiarity with the game Diplomacy
+  preprocessing: Diplomacy dialogues are downloaded from GitHub (all splits). The
+    data are ASCII encoded and newlines are removed. Each message and label is treated
+    as a sample.
+  status: public
+  url: https://huggingface.co/datasets/diplomacy_detection
+drug_experiences:
+  description: self-reports of various illicit drugs from Erowid.com
+  discipline: health
+  expertise: Familiarity with drug-related language
+  preprocessing: Drug experiences are downloaded from GitHub repository. For each
+    sample, we remove HTML formatting, split samples by paragraphs, and keep only
+    paragraphs with over 50 characters.
+  status: private
+  url: https://github.com/technillogue/erowid-w2v
+echr_decisions:
+  description: facts of cases heard before the European Court of Human Rights
+  discipline: social science
+  expertise: Ability to understand legalese
+  preprocessing: Decisions are downloaded from a public archive. A random sample of
+    500 decisions are selected from the files. The samples with any violated articles
+    are categorized as "violation," while the rest are categorized as "no violation."
+  status: public
+  url: https://paperswithcode.com/dataset/echr
+essay_scoring:
+  description: essays from students
+  discipline: social science
+  expertise: none
+  preprocessing: Essays are downloaded from a GitHub repository. Only essays from
+    set 5 are considered. Essays with a score of at least 3 are categorized as good
+    essays, while essays with a score less than 3 are bad essays.
+  status: public
+  url: https://www.kaggle.com/c/asap-aes
+fake_news:
+  description: fake and legitimate news
+  discipline: social science
+  expertise: none
+  preprocessing: Fake news articles are downloaded from the author's website. Full
+    articles are treated as text snippets.
+  status: public
+  url: http://web.eecs.umich.edu/~mihalcea/downloads.html#FakeNews
+fomc_speeches:
+  description: Federal Open Market Committee (FOMC) speeches from 1996-2020, which
+    describe Federal Reserve policy
+  discipline: social science
+  expertise: Familiarity with Federal Reserve policy
+  preprocessing: Fed speeches are downloaded from Kaggle. The macro indicator data
+    are merged in on the year and month. Full speech text is split by paragraph and
+    categorized by speaker, year, and macroeconomic indicator.
+  status: public
+  url: https://www.kaggle.com/datasets/natanm/federal-reserve-governors-speeches-1996-2020
+genius_lyrics:
+  description: lyrics collected from Genius.com before 2020
+  discipline: humanities
+  expertise: none
+  preprocessing: Genius lyrics are downloaded from a Google Drive. The lyrics are
+    merged with song metadata and treated as samples. We categorize lyrics by hand-selecting
+    popular artists, common genres, time periods, and view counts (over 1M views is
+    high, 500k-1M is medium).
+  status: public
+  url: https://www.cs.cornell.edu/~arb/data/genius-expertise/
+happy_moments:
+  description: self-reported happy moments and demographic characteristics
+  discipline: social science
+  expertise: none
+  preprocessing: The HappyDB dataset is downloaded from the official GitHub repository.
+    Demographic data is cleaned and merged into the happy moments. Happy moment descriptions
+    are treated as samples and are categorized by type of happy moment, country of
+    origin, and other demographic features.
+  status: public
+  url: https://github.com/megagonlabs/HappyDB
+huff_post_headlines:
+  description: headlines from the news outlet Huffington Post
+  discipline: social science
+  expertise: none
+  preprocessing: Huffington Post headlines are downloaded from Kaggle. The short description
+    of each article is treated as a sample and tokenized at the sentence level.
+  status: public
+  url: https://rishabhmisra.github.io/publications/
+immigration_speeches:
+  description: congressional and presidential speeches that mention immigration from
+    1880 to the present
+  discipline: social science
+  expertise: none
+  preprocessing: Immigration speeches are downloaded from the replication package.
+    The speech text is preprocessed to remove extraneous spaces. We engineer features
+    corresponding to time periods, well-known speakers, other significant time periods,
+    racial group under discussion, and geographic area of the United States.
+  status: public
+  url: https://github.com/dallascard/us-immigration-speeches/releases
+kickstarter:
+  description: names of startups on kickstarter.com
+  discipline: business
+  expertise: none
+  preprocessing: We download a 2018 crawl from Kickstarter from Kaggle. The project
+    name is treated as the text sample.
+  status: public
+  url: https://www.kaggle.com/datasets/kemical/kickstarter-projects?select=ks-projects-201612.csv
+microedit_humor:
+  description: funny sentences generated by making one-word edits to normal statements
+  discipline: social science
+  expertise: none
+  preprocessing: Microedit dataset is downloaded from the author's website. We make
+    the relevant edit to each text sample and treat the edited text sample as the
+    data point. We bin the mean annotator grade into 4 and denote each as unfunny,
+    neutral, funny, and very funny, respectively.
+  status: public
+  url: https://paperswithcode.com/dataset/humicroedit
+mnli:
+  description: a collection of sentence pairs annotated with textual entailment information
+    from a range of genres
+  discipline: aarning
+  expertise: none
+  preprocessing: The MNLI corpus is downloaded from the official website. We treat
+    the premise and hypothesis as text samples.
+  status: public
+  url: https://cims.nyu.edu/~sbowman/multinli/
+monster_jobs:
+  description: American job postings on monster.com
+  discipline: business
+  expertise: none
+  preprocessing: Jobs on Monster.com are downloaded from Kaggle. Job descriptions
+    are treated as samples and split at the paragraph and sentence level. We keep
+    and categorize jobs from seventeen large cities.
+  status: public
+  url: https://www.kaggle.com/datasets/PromptCloudHQ/us-jobs-on-monstercom
+movie_tmdb:
+  description: movie plot summaries from TMDB
+  discipline: business
+  expertise: none
+  preprocessing: TMDB movie overviews are downloaded from Kaggle. We keep only English
+    movies and bin popularity by deciles. The top decile is considered "hits," the
+    70-80th percentiles are considered "average," and the 30-40th percentiles are
+    considered "bad."
+  status: accessible
+  url: https://www.themoviedb.org/
+movie_wiki:
+  description: movie plot summaries collected from Wikipedia
+  discipline: social science
+  expertise: none
+  preprocessing: Wikipedia movie summaries are downloaded from Kaggle.
+  status: public
+  url: https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots
+news_popularity:
+  description: news headlines posted on social media platforms
+  discipline: business
+  expertise: none
+  preprocessing: Headlines are downloaded from a reproduction package. Headline and
+    title text are cleaned, and the title is treated as the text sample. The 100 most
+    positive and negative or popular and unpopular articles on each topic are used
+    as distributions.
+  status: public
+  url: https://archive.ics.uci.edu/ml/datasets/News+Popularity+in+Multiple+Social+Media+Platforms
+nli_benchmarks:
+  description: training examples from various natural language inference (NLI) datasets
+  discipline: machine learning
+  expertise: none
+  preprocessing: NLI benchmarks are downloaded from a public collection on Google
+    Drive. We examine the premise and hypothesis separately as samples.
+  status: public
+  url: https://github.com/alisawuffles/wanli
+npt_conferences:
+  description: Non-Proliferation of Nuclear Weapons (NPT) conference transcripts
+  discipline: social science
+  expertise: Familiarity with nuclear policy
+  preprocessing: 'NPT conference notes are extracted from the accompanying replication
+    package. Text is split by paragraph, and only paragraphs longer than 50 characters
+    are preserved. Text is split into three time ranges: pre-2008, 2008-2012, and
+    post-2012.'
+  status: public
+  url: https://journals.sagepub.com/doi/full/10.1177/0022343320960523
+open_deception:
+  description: arbitrary lies and truths from any domain generated by crowdworkers
+  discipline: social science
+  expertise: none
+  preprocessing: Open domain lies are downloaded from the public dataset and lie texts
+    are split into lies and truths.
+  status: public
+  url: https://web.eecs.umich.edu/~mihalcea/downloads.html#OpenDeception
+open_review:
+  description: submissions to ICLR, a machine learning conference from 2018 to 2021
+  discipline: machine learning
+  expertise: familiarity with machine learning
+  preprocessing: 'Open review abstracts are accessed via the openreview API. We query
+    for abstracts from the 2018-2021 ICLR blind submissions. Abstracts are classified
+    based on rating: >=7 ("great"), 5-6 ("good"), and <=4 ("bad").'
+  status: scraped
+  url: https://openreview.net/
+oral_histories:
+  description: oral histories from the United States
+  discipline: humanities
+  expertise: none
+  preprocessing: Oral histories are downloaded from the paper's accompanying GitHub
+    repository. Histories are classified according to birth year of the author (pre-1930,
+    1930-1949, post-1950), the race of the speaker (black, Asian, white), college
+    education (graduate/bachelors or none), and place of birth (South or not South,
+    as defined by the Census Bureau). We treat the full oral history as the text sample.
+  status: private
+  url: https://github.com/ohtap/ohtap
+parenting_reddit_users:
+  description: posts from individual parents in parenting related forums on Reddit
+  discipline: social science
+  expertise: none
+  preprocessing: Individual posts are retrieved with permission from the author. We
+    sample 5,000 posts per year. When use authorship histories to estimate how long
+    each author has been posting on parenting related subreddits and split according
+    to various account ages. We use posts on mom- and dad- related subreddits to guess
+    user gender and split accordingly.
+  status: private
+  url: https://github.com/SALT-NLP/Parenting_OnlineUsage
+parenting_subreddits:
+  description: posts from various parenting-related subreddits, which are text-based
+    forums on the site Reddit
+  discipline: social science
+  expertise: none
+  preprocessing: Posts from various subreddits are downloaded from the paper's GitHub
+    repository. We clean the text and split the posts according to the topic(s) each
+    post is tagged with.
+  status: public
+  url: https://github.com/SALT-NLP/Parenting_OnlineUsage
+poetry:
+  description: poems from PoetryFoundation.com
+  discipline: humanities
+  expertise: literary knowledge
+  preprocessing: Poems are downloaded from a 2019 scrape of the PoetryFoundation website
+    from Kaggle. The text is cleaned and split according subject tags and authorship.
+  status: public
+  url: https://www.kaggle.com/datasets/tgdivy/poetry-foundation-poems
+political_ads:
+  description: political ads observed by Facebook users
+  discipline: social science
+  expertise: none
+  preprocessing: Ads are downloaded from the Ad Observer website, which maintains
+    an aggregate of all collected ads. We extract targeting metadata from the targeting
+    field and define splits according to age, gender, location, interests, time, and
+    political lean.
+  status: public
+  url: https://adobserver.org/
+politifact:
+  description: fact-checks from the popular fact check website Politifact
+  discipline: soical science
+  expertise: none
+  preprocessing: .nan
+  status: public
+  url: https://www.kaggle.com/datasets/rmisra/politifact-fact-check-dataset
+qqp:
+  description: questions from Quora.com
+  discipline: machine learning
+  expertise: none
+  preprocessing: .nan
+  status: public
+  url: https://paperswithcode.com/dataset/quora-question-pairs
+radiology_diagnosis:
+  description: impressions and medical histories of radiology patients
+  discipline: health
+  expertise: Medical
+  preprocessing: Radiology diagnoses are downloaded from a GitHub copy of the original
+    task dataset. We parse the metadata to retrieve the diagnostic code, decision
+    type, impression, and patient history. Referencing the associated ICD codes, we
+    convert codes to colloquial diagnoses (e.g. 786.2 denotes cough). We treat the
+    histories and impressions as samples and split them according to diagnosis and
+    level of consensus.
+  status: public
+  url: https://aclanthology.org/W07-1013/
+rate_my_prof:
+  description: reviews of lecturers from RateMyProfessor.com
+  discipline: social science
+  expertise: none
+  preprocessing: Downloads sample of RateMyProfessor.com reviews from online repo.
+    We clean the text and guess the gender of the reviewed lecturer from the first
+    name using the gender_guesser package. Due to data availability, we consider only
+    male and female names. To improve the quality of the classification, we remove
+    any posts which use pronouns from the opposing sex (e.g. "him").
+  status: public
+  url: https://data.mendeley.com/datasets/fvtfjyvw7d/2
+reddit_humor:
+  description: jokes posted on the Reddit forum r/Jokes, a message board for sharing
+    jokes
+  discipline: humanities
+  expertise: none
+  preprocessing: Jokes are downloaded from the dev and test splits of the dataset.
+    We clean the text and split the dataset according to whether they are labeled
+    as funny.
+  status: public
+  url: https://aclanthology.org/2020.lrec-1.753/
+reddit_stress:
+  description: stress-related posts on Reddit
+  discipline: health
+  expertise: none
+  preprocessing: Reddit posts are downloaded from a GitHub repository. We split the
+    post text based on which subreddit they are posted on (related to PTSD, anxiety,
+    or stress generally).
+  status: public
+  url: https://aclanthology.org/D19-6213.pdf
+reuters_authorship:
+  description: articles from various Reuters authors
+  discipline: humanities
+  expertise: none
+  preprocessing: Reuters articles are downloaded from the UCI repository. The articles
+    are split according to author.
+  status: public
+  url: https://archive.ics.uci.edu/ml/datasets/Reuter_50_50
+riddles:
+  description: common English words
+  discipline: social science
+  expertise: none
+  preprocessing: The 3000 most common English words are manually copied from a website.
+    Words with between 5 and 8 characters are kept. We create two popular riddles.
+    First, we split words based on whether they have a duplicate character. We exclude
+    any words with multiple "doubles" or more than 2 of any character. Second, we
+    split words based on whether they have the letter T.
+  status: public
+  url: https://www.ef.edu/english-resources/english-vocabulary/top-3000-words/
+scotus_cases:
+  description: facts from cases heard by the Supreme Court of the United States (SCOTUS)
+  discipline: social science
+  expertise: legal knowledge
+  preprocessing: Supreme Court cases are downloaded from a GitHub repository. We identify
+    state/federal parties by manually defining keywords. We split based on the winning
+    party, the identity of each party, and the type of decision. We then define several
+    time periods and relevant political eras and split decisions accordingly. Finally,
+    we split according to the ruling's policy area and how it changes over time.
+  status: public
+  url: https://paperswithcode.com/paper/justice-a-benchmark-dataset-for-supreme-court
+short_answer_scoring:
+  description: short answers from students
+  discipline: social science
+  expertise: none
+  preprocessing: Short answers are downloaded from a GitHub mirror of the dataset.
+    We consider only responses to essay set 1. The two scores are averaged and binned
+    into good (>= 2.5), medium (1.5-2.5), and bad (<1.5).
+  status: public
+  url: https://www.kaggle.com/c/asap-sas
+snli:
+  description: a collection of sentence pairs annotated with textual entailment information
+    from image
+  discipline: machine learning
+  expertise: none
+  preprocessing: .nan
+  status: public
+  url: https://nlp.stanford.edu/projects/snli/
+squad_v2:
+  description: reading comprehension questions crowdsourced from Wikipedia articles
+  discipline: machine learning
+  expertise: none
+  preprocessing: .nan
+  status: public
+  url: https://rajpurkar.github.io/SQuAD-explorer/
+stock_news:
+  description: top news headlines on Reddit, an online message board
+  discipline: business
+  expertise: Knowledge of stock market and financial events
+  preprocessing: Headlines are downloaded from a GitHub mirror. We clean the text
+    and divide the samples based on whether the DOW rose or fell that day.
+  status: public
+  url: https://github.com/ShravanChintha/Stock-Market-prediction-using-daily-news-headlines
+suicide_notes:
+  description: posts from r/SuicideWatch and r/depression, two forums on Reddit
+  discipline: health
+  expertise: none
+  preprocessing: Reddit posts are downloaded from a GitHub repository. The post title
+    and body are combined to form the text samples. Samples are split based on whether
+    they were posted in a suicide-related Subreddit.
+  status: public
+  url: https://github.com/hesamuel/goodbye_world
+times_india_headlines:
+  description: headlines from Times of India news
+  discipline: social science
+  expertise: none
+  preprocessing: Headlines are downloaded from a Dataverse mirror. We use the first
+    1000 headlines in each year as samples.
+  status: public
+  url: https://www.kaggle.com/datasets/therohk/india-headlines-news-dataset
+trial_deception:
+  description: testimonies from witnesses in real trials
+  discipline: social science
+  expertise: none
+  preprocessing: Trial testimonies are downloaded from the author's website. The testimonies
+    are divided based on whether they are considered truthful.
+  status: public
+  url: https://web.eecs.umich.edu/~mihalcea/downloads.html#RealLifeDeception
+tweet_gender:
+  description: random Tweets
+  discipline: social science
+  expertise: none
+  preprocessing: Tweets are downloaded from a GitHub mirror. We consider only Tweets
+    which have a 100% rating for confidence. The tweets are split into male and female
+    gender groupings.
+  status: accessible
+  url: https://github.com/tranctan/Gender-Classification-based-on-Twritter-textual-data
+tweet_rumor:
+  description: Tweets about various rumors
+  discipline: social science
+  expertise: Familiarity with specific rumors
+  preprocessing: Twitter IDs are downloaded from Zenodo archive and collects 300 Tweets
+    for each rumor using the Twitter API. Tweets are evenly divided into early, middle,
+    and late thirds based on the publication time.
+  status: private
+  url: https://zenodo.org/record/2563864#.YzobLOzMK3I
+twitter_bots:
+  description: Tweets from users identified as bots or humans
+  discipline: social science
+  expertise: none
+  preprocessing: Annotated Tweets are downloaded from an online repository. We filter
+    out non-English Tweets using the guess_langauge package and exclude any Tweets
+    that contain eh words "fake" or "bot." For Tweets from traditional bots, social
+    bots, and humans, we sample 20,000 of each.
+  status: accessible
+  url: http://mib.projects.iit.cnr.it/dataset.html
+twitter_misspellings:
+  description: a collection of Tweets without emojis
+  discipline: social science
+  expertise: none
+  preprocessing: Assorted Tweets are downloaded from a GitHub mirror. We manually
+    identify eight common misspellings of words ("your", "with", "that", "going",
+    "know", "you", "what", "the") and divide samples based on whether they contain
+    each misspelling.
+  status: accessible
+  url: https://www.kaggle.com/datasets/kazanova/sentiment140
+twitter_sentiment140:
+  description: random Tweets
+  discipline: social science
+  expertise: none
+  preprocessing: Assorted Tweets are downloaded from a mirror and the text is used
+    as-is for clustering.
+  status: accessible
+  url: https://www.kaggle.com/datasets/kazanova/sentiment140
+un_debates:
+  description: speeches from debates at the United Nations
+  discipline: social science
+  expertise: Familiarity with political events
+  preprocessing: Debate transcripts are downloaded from the Dataverse reproduction
+    package. Samples are divided based on the country and year of the snippet. First,
+    we isolate samples from Russia, China, and the United States and specify 3 time
+    periods of interest. Next, we divide all samples by the decade. Finally, we create
+    distributions for 19 countries of interest.
+  status: public
+  url: https://doi.org/10.7910/DVN/0TJX8Y
+unhealthy_conversations:
+  description: expert-annotated unhealthy conversations
+  discipline: humanities
+  expertise: none
+  preprocessing: Conversation transcripts are downloaded from the official GitHub
+    repository. For each annotated attribute, we split the dataset based on whether
+    that form of unhealthy conversation is present in the sample.
+  status: public
+  url: https://github.com/conversationai/unhealthy-conversations
+urban_dictionary:
+  description: definitions from UrbanDictionary.com, a crowdsourced English dictionary
+  discipline: humanities
+  expertise: none
+  preprocessing: Urban Dictionary entries are downloaded from Kaggle. Definitions
+    are split into groups representing the top 1, 5, and 10 percent of definitions
+    ranked by both upvotes and downvotes; we sample 10,000 from each and create a
+    control distribution by randomly sampling 10,000 definitions from all entries.
+  status: public
+  url: https://www.kaggle.com/therohk/urban-dictionary-words-dataset
+wikitext:
+  description: text snippets from Wikipedia
+  discipline: machine learning
+  expertise: none
+  preprocessing: The Wikipedia snippets are loaded from hugginface. We remove any
+    samples that are empty or start with '=' (which represent headings); samples are
+    tokenized at the sentence level and used for clustering.
+  status: public
+  url: https://huggingface.co/datasets/wikitext
+yc_startups:
+  description: descriptions of companies that were part of the Y Combinator startup
+    incubator
+  discipline: business
+  expertise: none
+  preprocessing: YCombinator company descriptions are downloaded from a 2022 scrape
+    on GitHub. Only companies are long descriptions are preserved. Companies are split
+    according to founder characteristics, year, "top company" designation, operating
+    status, and location.
+  status: public
+  url: https://github.com/akshaybhalotia/yc_company_scraper
