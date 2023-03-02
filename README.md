@@ -3,7 +3,9 @@ OpenD5
 
 Authors: Ruiqi Zhong, Peter Zhang, Steve Li, JinWoo Ahn, Dan Klein, Jacob Steinhardt
 
-This repository hosts [OpenD5](https://arxiv.org/pdf/2302.14233.pdf), a benchmark for discovering natural language facts from pairs of corpora. Our paper focuses on the setting comparing two distributions of text via a text description.
+[Paper link](https://arxiv.org/pdf/2302.14233.pdf)
+
+This repository hosts OpenD5, a benchmark for discovering natural language facts from pairs of corpora. Our paper focuses on the setting comparing two distributions of text via a text description. The repository containing the system is available [here](https://github.com/ruiqi-zhong/D5).
 
 ![](img/example.jpeg)
 
@@ -29,3 +31,4 @@ If you'd like to contribute additonal problems to the benchmark, please:
 - Create a script for constructing various splits for the dataset (see [`pull_data.py`](scripts/pull_data.py)).
 - Add the dataset's relevant metadata to the [`datasets.yaml`](schema/datasets.yaml) and [`pairs.yaml`](schema/pairs.yaml) schema.
 - Create a pull request and list the relevant citation.
+- Email petez@berkeley.edu with any questions.
