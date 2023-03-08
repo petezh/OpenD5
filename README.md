@@ -32,3 +32,14 @@ If you'd like to contribute additonal problems to the benchmark, please:
 - Add the dataset's relevant metadata to the [`datasets.yaml`](schema/datasets.yaml) and [`pairs.yaml`](schema/pairs.yaml) schema.
 - Create a pull request and list the relevant citation.
 - Email petez@berkeley.edu with any questions.
+
+# BibTeX
+
+```bibtex
+@article{Peebles2022,
+  title={Learning to Learn with Generative Models of Neural Network Checkpoints},
+  author={William Peebles and Ilija Radosavovic and Tim Brooks and Alexei Efros and Jitendra Malik},
+  year={2022},
+  journal={arXiv preprint arXiv:2209.12892},
+}
+```
