@@ -36,10 +36,10 @@ If you'd like to contribute additonal problems to the benchmark, please:
 # BibTeX
 
 ```bibtex
-@article{Peebles2022,
-  title={Learning to Learn with Generative Models of Neural Network Checkpoints},
-  author={William Peebles and Ilija Radosavovic and Tim Brooks and Alexei Efros and Jitendra Malik},
-  year={2022},
-  journal={arXiv preprint arXiv:2209.12892},
+@article{zhong2023goal,
+  title={Goal Driven Discovery of Distributional Differences via Language Descriptions},
+  author={Zhong, Ruiqi and Zhang, Peter and Li, Steve and Ahn, Jinwoo and Klein, Dan and Steinhardt, Jacob},
+  journal={arXiv preprint arXiv:2302.14233},
+  year={2023}
 }
 ```
