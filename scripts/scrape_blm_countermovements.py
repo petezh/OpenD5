@@ -4,7 +4,6 @@ Constructs the blm_countermovements distributions.
 
 import pandas as pd
 import tweepy
-
 from parameters import *
 from utils import encode_ascii
 
@@ -17,17 +16,18 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
+
 def get_tweet_info(row):
     """
-Calls Twitter API to get tweet text.
+    Calls Twitter API to get tweet text.
     """
 
-    id_of_tweet = int(row['ID'])
+    id_of_tweet = int(row["ID"])
     try:
         tweet = api.get_status(id_of_tweet)
-        row['text'] = tweet.text
+        row["text"] = tweet.text
     except:
-        row['text'] = None
+        row["text"] = None
     return row
 
 
@@ -37,17 +37,18 @@ def scrape():
     """
 
     paths = {
-        'all_lives_matter': f'{MANUAL_FOLDER}/blm_countermovements/AllLivesMatter_IDs.csv',
-        'blue_lives_matter': f'{MANUAL_FOLDER}/blm_countermovements/BlueLivesMatter_IDs.csv',
-        'white_lives_matter': f'{MANUAL_FOLDER}/blm_countermovements/WhiteLivesMatter_IDs.csv',
+        "all_lives_matter": f"{MANUAL_FOLDER}/blm_countermovements/AllLivesMatter_IDs.csv",
+        "blue_lives_matter": f"{MANUAL_FOLDER}/blm_countermovements/BlueLivesMatter_IDs.csv",
+        "white_lives_matter": f"{MANUAL_FOLDER}/blm_countermovements/WhiteLivesMatter_IDs.csv",
     }
 
     df = pd.DataFrame()
     for movement, filepath in paths.items():
-        with open(filepath, 'r') as f:
+        with open(filepath, "r") as f:
             IDs = f.readlines()[1:]
-            movement_df = pd.DataFrame({'movement': movement, 'ID': IDs}).sample(
-                n=1000, replace=False, random_state=0)
+            movement_df = pd.DataFrame({"movement": movement, "ID": IDs}).sample(
+                n=1000, replace=False, random_state=0
+            )
             df = df.append(movement_df)
 
     df = df.apply(get_tweet_info, axis=1)
@@ -55,7 +56,6 @@ def scrape():
 
     data = {}
     for movement in paths:
-        data[movement] = df[df.movement == movement].text.apply(
-            encode_ascii).tolist()
+        data[movement] = df[df.movement == movement].text.apply(encode_ascii).tolist()
 
     return data

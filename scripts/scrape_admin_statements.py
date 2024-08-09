@@ -5,9 +5,9 @@ Constructs the admin_statements distributions.
 import glob
 
 import pdfplumber
-
-from utils import *
 from parameters import *
+from utils import *
+
 
 def scrape():
     """
@@ -15,11 +15,11 @@ def scrape():
     statements-of-administration-policy-main repository.
     """
 
-    NAME = 'admin_statements'
+    NAME = "admin_statements"
 
-    directory = f'{DOWNLOAD_FOLDER}/{NAME}'
+    directory = f"{DOWNLOAD_FOLDER}/{NAME}"
 
-    administrations = ['44-Obama', '45-Trump', '46-Biden']
+    administrations = ["44-Obama", "45-Trump", "46-Biden"]
 
     data = {}
 
@@ -27,7 +27,8 @@ def scrape():
         print(admin)
 
         files = glob.glob(
-            f'{directory}/statements-of-administration-policy-main/archive/statements/{admin}/**/*.pdf')
+            f"{directory}/statements-of-administration-policy-main/archive/statements/{admin}/**/*.pdf"
+        )
 
         statements = []
 
@@ -39,9 +40,9 @@ def scrape():
                         text += page.extract_text() + " "
 
                 if (loc := text.find("The Administration")) != 0:
-                    text = text[loc:].replace('\n', '')
-                    text = text.replace('*', '').strip()
-                    texts = split_delimiter_(text, '\n')
+                    text = text[loc:].replace("\n", "")
+                    text = text.replace("*", "").strip()
+                    texts = split_delimiter_(text, "\n")
                     texts = split_truncate(texts)
                     statements.extend(texts)
             except:
